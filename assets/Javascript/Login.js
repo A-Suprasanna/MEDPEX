@@ -21,71 +21,68 @@ const analytics = getAnalytics(app);
 
 export { auth, signInWithEmailAndPassword };
 
-// Event listener for the form submission
-document.getElementById("Login").addEventListener("submit", (e) => {
-  e.preventDefault(); // Prevent form from submitting
-
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  // Validate email and password fields before attempting to sign in
-  if (!email || !password) {
-    alert("Please fill out both email and password fields!");
-    return;
-  }
-
-  // Sign in with Firebase authentication
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in successfully
-      const user = userCredential.user;
-      alert("Login successful!");
-      // Redirect to a different page after successful login
-      window.location.href = "../HTML/index.html"; // Replace with your desired page
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      alert(`Error: ${errorMessage}`); // Fixed the error alert message
-    });
-});
-
-// Form validation
+// Selecting form and input elements
 const form = document.getElementById("Login");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const emailError = document.getElementById("emailError");
 const passwordError = document.getElementById("passwordError");
 
+// Clear error messages when typing
+email.addEventListener("input", () => {
+  emailError.textContent = "";
+});
+
+password.addEventListener("input", () => {
+  // Password length validation message
+  if (password.value.length < 8) {
+    passwordError.textContent = `Password must be at least 8 characters; you entered ${password.value.length}.`;
+  } else {
+    passwordError.textContent = "";
+  }
+});
+
+// Form submit event
 form.addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form from submitting by default
+
+  // Reset error messages
   emailError.textContent = "";
   passwordError.textContent = "";
 
-  // Email validation
-  if (!email.validity.valid) {
-    if (email.validity.valueMissing) {
-      emailError.textContent = "Email is required!";
-    } else if (email.validity.typeMismatch) {
-      emailError.textContent = "Please enter a valid email address!";
-    }
-    event.preventDefault();
+  let formIsValid = true;
+
+  // Validate email
+  if (!email.value) {
+    emailError.textContent = "Email is required!";
+    formIsValid = false;
+  } else if (!email.validity.valid) {
+    emailError.textContent = "Please enter a valid email address!";
+    formIsValid = false;
   }
 
-  // Password validation
-  if (!password.checkValidity()) {
-    if (password.validity.valueMissing) {
-      passwordError.textContent = "Password is required!";
-    } else if (password.validity.tooShort) {
-      passwordError.textContent = "Password must be at least 8 characters long!";
-    }
-    event.preventDefault();
+  // Validate password length
+  if (!password.value) {
+    passwordError.textContent = "Password is required!";
+    formIsValid = false;
+  } else if (password.value.length < 8) {
+    passwordError.textContent = "Password must be at least 8 characters!";
+    formIsValid = false;
   }
+
+  // Stop if form is invalid
+  if (!formIsValid) return;
+
+  // Firebase authentication
+  signInWithEmailAndPassword(auth, email.value, password.value)
+    .then((userCredential) => {
+      // Successful sign-in
+      alert("Login successful!");
+      window.location.href = "./index.html"; // Replace with your destination page
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      alert(`Error: ${errorMessage}`);
+    });
 });
 
-// Password length validation on input
-password.addEventListener("input", function() {
-  passwordError.textContent = "";
-  if (password.validity.tooShort) {
-    passwordError.textContent = `Password must be at least ${password.minLength} characters; you entered ${password.value.length}.`;
-  }
-});

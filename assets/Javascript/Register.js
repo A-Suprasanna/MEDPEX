@@ -105,7 +105,7 @@ form.addEventListener("submit", function(event) {
       alert("Registration successful!");
       
       // Optional: redirect to another page
-      window.location.href = "../HTML/index.html"; // Adjust the URL as needed
+      window.location.href = "./index.html"; // Adjust the URL as needed
     })
     .catch((error) => {
       const errorCode = error.code;
