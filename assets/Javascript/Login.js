@@ -78,7 +78,7 @@ form.addEventListener("submit", function(event) {
     .then((userCredential) => {
       // Successful sign-in
       alert("Login successful!");
-      window.location.href = "./index.html"; // Replace with your destination page
+      window.location.href = "./home.html"; // Replace with your destination page
     })
     .catch((error) => {
       const errorMessage = error.message;
