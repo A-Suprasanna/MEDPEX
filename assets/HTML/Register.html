@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDPEX SIGNUP</title>
+    <link rel="stylesheet" href="../css/Register.css">
+</head>
+<body>
+  <form id="signupForm" novalidate action="">
+    <h2 class="heading">MEDPEX SIGNUP</h2>
+
+    <label for="name">Username:</label>
+    <input type="text" id="name" required>
+    <span id="nameError"></span>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <span id="emailError"></span>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required minlength="8">
+    <span id="passwordError"></span>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" required minlength="8">
+    <span id="confirmPasswordError"></span>
+
+    <button type="register" class="regkey">Register</button>
+  </form>
+  <script type="module" src="../Javascript/Register.js"></script>
+</body>
+</html>
