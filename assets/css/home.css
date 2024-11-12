@@ -1,0 +1,77 @@
+*{
+  margin: 0%;
+  padding: 0%;
+}
+.nav{
+    text-decoration: none;
+    color: black;
+    font-size: 26px;
+    margin-top: 5px;
+  }
+  .navigation{
+    display: flex;
+    justify-content:end;
+    position: fixed;
+    margin-top: 16px;
+    gap: 40px;
+    font-size: 25px;
+    font-weight: bolder;
+    z-index: 2;
+    width: 97%;
+    height: 70px;
+  }
+.box{
+  height:40px;
+  width:40px;
+  border-radius: 40px;
+  background-color: aqua;
+  margin-left: -430px;
+}
+.title{
+  margin-top: 4px;
+  margin-right:140px;
+  font-size: 33px;
+  color: black;
+}
+.aboutmed{
+  height: 300px;
+  width: 600px;
+  background-color:rgb(67, 117, 168);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  position: absolute;
+  top: 300px;
+  left:150px;
+  line-height: 35px;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+.medpeople{
+  margin-top:255px;
+  margin-left: 940px;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+.medpeople:hover{
+  scale: 1.1;
+}
+.Homepage{
+/* background-image: url(../images/blue\ genetic\ dna\ medical\ background.jpg); */
+background-image: linear-gradient(to right, #f3f6fb, #e1e8f0);
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-size:cover;
+height: 870px;
+background-color: #2a3d66;
+color: white;
+}
+.profile{
+  position: absolute;
+  left: 35px;
+}
+ 
+ 
