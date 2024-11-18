@@ -1,0 +1,89 @@
+{
+    "doctype": "html",
+    "html": {
+      "lang": "en",
+      "head": {
+        "meta": [
+          { "charset": "UTF-8" },
+          { "name": "viewport", "content": "width=device-width, initial-scale=1.0" }
+        ],
+        "title": "Document",
+        "link": {
+          "rel": "stylesheet",
+          "href": "./assets/css/home.css"
+        }
+      },
+      "body": {
+        "div": {
+          "class": "Homepage",
+          "nav": {
+            "class": "navigation",
+            "children": [
+              {
+                "tag": "img",
+                "attributes": {
+                  "src": "./assets/images/Profile image.png",
+                  "class": "profile",
+                  "height": "70",
+                  "width": "70"
+                }
+              },
+              {
+                "tag": "p",
+                "class": "title",
+                "text": "MEDPEX"
+              },
+              {
+                "tag": "a",
+                "attributes": { "href": "#Home", "class": "nav" },
+                "text": "Home"
+              },
+              {
+                "tag": "a",
+                "attributes": { "href": "#Categories", "class": "nav" },
+                "text": "Categories"
+              },
+              {
+                "tag": "a",
+                "attributes": { "href": "#Purchases", "class": "nav" },
+                "text": "Purchases"
+              },
+              {
+                "tag": "a",
+                "attributes": { "href": "#Featured", "class": "nav" },
+                "text": "Featured"
+              },
+              {
+                "tag": "a",
+                "attributes": { "href": "#About Us", "class": "nav" },
+                "text": "About Us"
+              },
+              {
+                "tag": "a",
+                "attributes": { "href": "#Gallery", "class": "nav" },
+                "text": "Gallery"
+              },
+              {
+                "tag": "a",
+                "attributes": { "href": "#Contact Us", "class": "nav" },
+                "text": "Contact Us"
+              }
+            ]
+          },
+          "p": {
+            "class": "aboutmed",
+            "text": "Medicines help prevent, treat, or manage various health conditions by acting on specific processes within the body. They include both prescription and over-the-counter options. Safety relies on proper dosage, timing, and awareness of possible side effects or interactions. Regulatory agencies, like the FDA, ensure medicines are safe and effective through rigorous testing."
+          },
+          "img": {
+            "class": "medpeople",
+            "attributes": {
+              "src": "./assets/images/Generalmedicinebackground.png",
+              "height": "400",
+              "width": "400"
+            }
+          }
+        }
+      }
+    }
+  }
+  

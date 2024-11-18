@@ -37,9 +37,9 @@ form {
   }
   span {
     color: red;
-    font-size: 12px;
+    font-size: 15px;
     display: block;
-    text-align: start;
+    text-align: center;
   }
   button {
     padding: 10px;

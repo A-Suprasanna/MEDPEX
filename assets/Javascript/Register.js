@@ -1,9 +1,8 @@
-// Import the functions you need from the SDKs you need
+// Import Firebase functions
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
 
-// Your web app's Firebase configuration
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCJ0R0fij-e5WnkNyZJlX71ky7X3Pvbqdg",
   authDomain: "medpex.firebaseapp.com",
@@ -11,53 +10,40 @@ const firebaseConfig = {
   storageBucket: "medpex.firebasestorage.app",
   messagingSenderId: "715806311436",
   appId: "1:715806311436:web:ff4381560c9eb030601a29",
-  measurementId: "G-H0JV8Y4ECN"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const analytics = getAnalytics(app);
 
-// Selecting form and input elements
+// Form elements
 const form = document.getElementById("signupForm");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const confirmPasswordInput = document.getElementById("confirmPassword");
+
+// Error elements
 const nameError = document.getElementById("nameError");
 const emailError = document.getElementById("emailError");
 const passwordError = document.getElementById("passwordError");
 const confirmPasswordError = document.getElementById("confirmPasswordError");
 
-// Clear error messages on typing in each field
-nameInput.addEventListener("input", () => {
-  nameError.textContent = "";
+// Validation patterns
+const nameRegex = /^[a-zA-Z\s]{3,50}$/; // Only letters and spaces, 3-50 characters
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Valid email format
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,32}$/; // Password rules
+
+// Clear errors on input
+[nameInput, emailInput, passwordInput, confirmPasswordInput].forEach((input) => {
+  input.addEventListener("input", () => {
+    document.getElementById(`${input.id}Error`).textContent = "";
+  });
 });
 
-emailInput.addEventListener("input", () => {
-  emailError.textContent = "";
-});
-
-// Real-time validation for password
-passwordInput.addEventListener("input", () => {
-  if (passwordInput.value.length < 8) {
-    passwordError.textContent = "Password must be at least 8 characters!";
-  } else {
-    passwordError.textContent = "";
-  }
-  confirmPasswordError.textContent = ""; // Clear confirm password error since it depends on password match
-});
-
-// Real-time validation for confirm password
-confirmPasswordInput.addEventListener("input", () => {
-  if (confirmPasswordInput.value === passwordInput.value) {
-    confirmPasswordError.textContent = "";
-  }
-});
-
-form.addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent form from submitting by default
+// Form submit event
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
   // Reset error messages
   nameError.textContent = "";
@@ -65,47 +51,53 @@ form.addEventListener("submit", function(event) {
   passwordError.textContent = "";
   confirmPasswordError.textContent = "";
 
-  // Form validation checks
-  let formIsValid = true;
+  let valid = true;
 
+  // Validate name
   if (!nameInput.value.trim()) {
     nameError.textContent = "Name is required!";
-    formIsValid = false;
+    valid = false;
+  } else if (!nameRegex.test(nameInput.value)) {
+    nameError.textContent = "Name must be 3-50 characters, letters, and spaces only.";
+    valid = false;
   }
 
+  // Validate email
   if (!emailInput.value.trim()) {
     emailError.textContent = "Email is required!";
-    formIsValid = false;
+    valid = false;
+  } else if (!emailRegex.test(emailInput.value)) {
+    emailError.textContent = "Enter a valid email";
+    valid = false;
   }
 
-  if (!passwordInput.value || passwordInput.value.length < 8) {
-    passwordError.textContent = "Password must be at least 8 characters!";
-    formIsValid = false;
+  // Validate password
+  if (!passwordInput.value.trim()) {
+    passwordError.textContent = "Password is required!";
+    valid = false;
+  } else if (!passwordRegex.test(passwordInput.value)) {
+    passwordError.textContent =
+      "Password must be 8-32 characters, include uppercase, lowercase, number, and special character.";
+    valid = false;
   }
 
-  // Check confirm password field
-  if (!confirmPasswordInput.value) {
+  // Validate confirm password
+  if (!confirmPasswordInput.value.trim()) {
     confirmPasswordError.textContent = "Confirm Password is required!";
-    formIsValid = false;
-  } else if (passwordInput.value !== confirmPasswordInput.value) {
+    valid = false;
+  } else if (confirmPasswordInput.value !== passwordInput.value) {
     confirmPasswordError.textContent = "Passwords do not match!";
-    formIsValid = false;
+    valid = false;
   }
 
-  // If form is invalid, stop here
-  if (!formIsValid) {
-    return;
-  }
+  if (!valid) return; // Stop if validation fails
 
   // Firebase registration
   createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
     .then((userCredential) => {
       // Registration successful
-      const user = userCredential.user;
       alert("Registration successful!");
-      
-      // Optional: redirect to another page
-      window.location.href = "./home.html"; // Adjust the URL as needed
+      window.location.href = "./home.html"; // Redirect to home page
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -115,10 +107,8 @@ form.addEventListener("submit", function(event) {
       if (errorCode === "auth/email-already-in-use") {
         emailError.textContent = "This email is already registered!";
       } else {
-        alert(`Error: ${errorMessage}`);
+        emailError.textContent = errorMessage;
       }
     });
 });
-
-
 
