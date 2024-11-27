@@ -1,18 +1,177 @@
-{
-  "title": "Document",
-  "styles": ["./assets/css/home.css"],
-  "navigation": [
-    { "href": "#Home", "label": "Home" },
-    { "href": "#Categories", "label": "Categories" },
-    { "href": "#Purchases", "label": "Purchases" },
-    { "href": "#Featured", "label": "Featured" },
-    { "href": "#About Us", "label": "About Us" },
-    { "href": "#Gallery", "label": "Gallery" },
-    { "href": "#Contact Us", "label": "Contact Us" }
-  ],
-  "aboutMedicines": "Medicines help prevent, treat, or manage various health conditions by acting on specific processes within the body. They include both prescription and over-the-counter options. Safety relies on proper dosage, timing, and awareness of possible side effects or interactions. Regulatory agencies, like the FDA, ensure medicines are safe and effective through rigorous testing.",
-  "images": [
-    { "src": "./assets/images/Profile image.png", "alt": "Profile image", "height": 70, "width": 70 },
-    { "src": "./assets/images/Generalmedicinebackground.png", "alt": "Medicine background", "height": 400, "width": 400 }
-  ]
-}
+[
+  {
+    "image": "https://tiimg.tistatic.com/fp/1/007/784/paracetamol-500mg-tablets--229.jpg",
+    "name": "Paracetamol",
+    "description": "Paracetamol (also known as Acetaminophen) is a commonly used over-the-counter medication for relieving mild to moderate pain and reducing fever.",
+    "price": 200,
+    "currency": "INR"
+  },
+  {
+    "image": "https://www.albionbd.com/wp-content/uploads/2021/08/Aspirin-300mg-Soluble-Tablet.jpg",
+    "name": "Aspirin",
+    "description": "Aspirin is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce pain, inflammation, and fever, and to prevent blood clots.",
+    "price": 290,
+    "currency": "INR"
+  },
+  {
+    "image": "https://5.imimg.com/data5/SELLER/Default/2024/1/377899921/DI/ER/FI/101293874/azithromycin-500-mg-tablets-500x500.jpg",
+    "name": "Azithromycin",
+    "description": "Azithromycin is an antibiotic used to treat various bacterial infections, including respiratory, skin, and ear infections.",
+    "price": 260,
+    "currency": "INR"
+  },
+  {
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSmVZb-jtVwBvrCazI9rv2Coet6__dJT3Zhw&s",
+    "name": "Morphine",
+    "description": "Morphine is a powerful opioid pain medication used to manage severe pain, particularly after surgery or injury.",
+    "price": 400,
+    "currency": "INR"
+  },
+  {
+    "image": "https://ecommerce.genericartmedicine.com/upload/products/product-photo-745.jpeg",
+    "name": "Ciprofloxacin",
+    "description": "Ciprofloxacin is an antibiotic used to treat a variety of bacterial infections, including urinary tract, respiratory, and skin infections.",
+    "price": 1500,
+    "currency": "INR"
+  },
+ {
+        "image": "https://m.media-amazon.com/images/I/41i+zWBppZL._AC_UF1000,1000_QL80_.jpg",
+        "name": "Stethoscope ",
+        "description": " A device used by doctors to listen to internal sounds of the body, such as heartbeats and lung sounds.",
+        "price": 750,
+        "currency": "INR"
+      },
+      {
+        "image": "https://5.imimg.com/data5/SELLER/Default/2023/8/335862709/UC/YU/KS/141647456/firstmed-professional-aneroid-sphygmomanometer-with-stethoscope-black-bp-monitor-black-500x500.png",
+        "name": "Sphygmomanometer ",
+        "description": "A device used to measure blood pressure. It consists of an inflatable cuff and a gauge to measure the pressure in the arteries.",
+        "price": 640,
+        "currency": "INR"
+      },
+      {
+        "image": "https://m.media-amazon.com/images/I/610lBxabhTL.jpg",
+        "name": "Thermometer",
+        "description": "A device used to measure body temperature. It can be digital or mercury-based and is commonly used to check for fever.",
+        "price": 650,
+        "currency": "INR"
+      },
+      {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsDp-V7E2ha_-fzAxQEKE6FnSSGaBUAMoAQ&s",
+        "name": "Otoscope",
+        "description": "A handheld device used by doctors to examine the ears, specifically the ear canal and eardrum.",
+        "price": 380,
+        "currency": "INR"
+      },
+      {
+        "image": "https://nationalindco.com/wp-content/uploads/2023/05/ophthalmoscope_beta_200s_with_rechargeable_battery_handle201853153342179_b-450x450.jpg",
+        "name": "Ophthalmoscope",
+        "description": "An instrument used by doctors to inspect the inside of the eye, including the retina, optic disc, and blood vessels.",
+        "price": 285,
+        "currency": "INR"
+      },
+      {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSrseaqKdYKnJiHUVmknYXIysiSzoEyu1_vg&s",
+        "name": "Immune Boosting Vitamin C ",
+        "description": "Supports immune health, reduces the severity of colds, and promotes skin health.",
+        "price": 200,
+        "currency": "INR"
+      },
+      {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZaXN2MUwEXKy98KyPLg-bYT-HCQD64t8M7w&s",
+        "name": "Pure Omega-3 Fish Oil",
+        "description": "Rich in EPA and DHA, this supplement supports heart health, brain function, and reduces inflammation.",
+        "price": 290,
+        "currency": "INR"
+      },
+      {
+        "image": "https://images-eu.ssl-images-amazon.com/images/I/61sxYaxdcoL._AC_UL600_SR600,600_.jpg",
+        "name": "Natural Iron Supplement",
+        "description":"Supports red blood cell production, combats fatigue, and enhances overall energy levels.",
+        "price": 260,
+        "currency": "INR"
+      },
+      {
+        "image": "https://m.media-amazon.com/images/I/7119ktSu-aL._AC_UF1000,1000_QL80_.jpg",
+        "name": "Green Tea Extract Fat Burner",
+        "description": "Rich in antioxidants, helps boost metabolism and supports weight loss.",
+        "price": 400,
+        "currency": "INR"
+      },
+      {
+        "image": "https://rukminim2.flixcart.com/image/850/1000/kmds4nk0/vitamin-supplement/z/6/8/60-organic-turmeric-curcumin-extract-60-caps-perennial-original-imagfanvyhe9tvvx.jpeg?q=90&crop=false",
+        "name": "Organic Turmeric Curcumin Extract",
+        "description":"Offers potent anti-inflammatory benefits and supports joint and brain health.",
+        "price": 1500,
+        "currency": "INR"
+      },
+     {
+            "image": "https://m.media-amazon.com/images/I/51O1OcXauaL._AC_UF1000,1000_QL80_.jpg",
+            "name": "Surgical Scissors",
+            "description": "Scissors designed for cutting tissues, sutures, or other surgical materials.",
+            "price": 750,
+            "currency": "INR"
+          },
+          {
+            "image": "https://rukminim2.flixcart.com/image/850/1000/ky0g58w0/surgical-scalpel/k/o/8/10-sterile-11-surgical-blades-with-free-3-scalpel-knife-handle-original-imagabyqrxf7gtma.jpeg?q=90&crop=false",
+            "name": "Surgical Scalpels",
+            "description": "Precision cutting instruments used for making incisions in tissue during surgery.",
+            "price": 640,
+            "currency": "INR"
+          },
+          {
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2qFH7ucymPFnibHhvnHuPTLCReux4EdaRbA&s",
+            "name": "Hemostats",
+            "description": "Clamps used to control bleeding by constricting blood vessels or tissues during surgery.",
+            "price": 650,
+            "currency": "INR"
+          },
+          {
+            "image": "https://images-cdn.ubuy.co.in/634e4d1b611ffe61c8134a73-nitrile-gloves-1000-ml-disposable-latex.jpg",
+            "name": "Surgical Gloves",
+            "description": "Sterile gloves worn by medical staff during procedures to maintain sterility.",
+            "price": 380,
+            "currency": "INR"
+          },
+          {
+            "image": "https://rukminim2.flixcart.com/image/850/1000/ksnjp8w0/mask-respirator/a/l/y/free-size-100-surgical-mask-pack-of-100-pieces-disposable-masks-original-imag65k8q6hddzcc.jpeg?q=90&crop=false",
+            "name": "Surgical Masks",
+            "description": "Worn by surgeons and surgical staff to prevent contamination and protect both the patient and healthcare workers.",
+            "price": 285,
+            "currency": "INR"
+          },
+          {
+            "image": "https://ars.els-cdn.com/content/image/1-s2.0-S1530891X20428198-gr1.jpg",
+            "name": "Insulin Pen",
+            "description": "A pre-filled, disposable device used for administering insulin to manage blood sugar levels in diabetes.",
+            "price": 750,
+            "currency": "INR"
+          },
+          {
+            "image": "https://images-cdn.ubuy.co.in/65e0c9201858a173fb205331-metene-twist-top-lancets-for-lancing.jpg",
+            "name": "Lancets",
+            "description": "Small, sharp needles used with a lancing device to obtain blood samples for glucose testing.",
+            "price": 640,
+            "currency": "INR"
+          },
+          {
+            "image": "https://m.media-amazon.com/images/I/61KOWaNOzrL.jpg",
+            "name": "Diabetic Test Strips",
+            "description": "Disposable strips used in conjunction with blood glucose meters to measure blood sugar levels.",
+            "price": 650,
+            "currency": "INR"
+          },
+          {
+            "image": "https://m.media-amazon.com/images/I/71bBqvfDf0L.jpg",
+            "name": "Diabetic Skin Creams",
+            "description": "Moisturizing lotions designed to prevent dry, cracked skin, which is a common issue for diabetics.",
+            "price": 380,
+            "currency": "INR"
+          },
+          {
+            "image": "https://rukminim2.flixcart.com/image/850/1000/ky90scw0/resistance-tube/6/j/m/pack-of-3-fabric-resistance-loop-exercise-bands-for-hips-thighs-original-imagagv9ghecdhm6.jpeg?q=20&crop=false",
+            "name": "Exercise Bands ",
+            "description": "Resistance bands used in workouts to help diabetics improve circulation, strength, and overall fitness.",
+            "price": 285,
+            "currency": "INR"
+          }
+    ]

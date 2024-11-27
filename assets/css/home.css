@@ -7,18 +7,20 @@
     color: black;
     font-size: 26px;
     margin-top: 5px;
+    padding-right: 15px;
   }
   .navigation{
     display: flex;
     justify-content:end;
     position: fixed;
-    margin-top: 16px;
     gap: 40px;
     font-size: 25px;
     font-weight: bolder;
-    z-index: 2;
-    width: 97%;
     height: 70px;
+    z-index: 2;
+    background-image: linear-gradient(to right, #f3f6fb, #e1e8f0);
+    width: 100%;
+    padding-top: 15px;
   }
 .box{
   height:40px;
@@ -28,20 +30,24 @@
   margin-left: -430px;
 }
 .title{
-  margin-top: 4px;
-  margin-right:140px;
+  margin-top: -37px;
+  margin-right:100px;
   font-size: 33px;
   color: black;
 }
+.aboutmed:hover{
+  scale: 1.1;
+  transition: 0.4s;
+}
 .aboutmed{
-  height: 300px;
-  width: 600px;
+  height: 330px;
+  width: 630px;
   background-color:rgb(67, 117, 168);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 28px;
   position: absolute;
   top: 300px;
   left:150px;
@@ -50,14 +56,14 @@
   border-radius: 20px;
 }
 .medpeople{
-  margin-top:255px;
-  margin-left: 940px;
-  border-radius: 20px;
+  margin-top:80px;
+  margin-left: 1px;
+  /* border-radius: 20px; */
   transition: 0.4s;
 }
-.medpeople:hover{
+/* .medpeople:hover{
   scale: 1.1;
-}
+} */
 .Homepage{
 /* background-image: url(../images/blue\ genetic\ dna\ medical\ background.jpg); */
 background-image: linear-gradient(to right, #f3f6fb, #e1e8f0);
@@ -69,9 +75,496 @@ height: 870px;
 background-color: #2a3d66;
 color: white;
 }
+.catebackground{
+  background-image: linear-gradient(to right, #f3f6fb, #e1e8f0);
+}
 .profile{
   position: absolute;
   left: 35px;
+  top:10px;
 }
  
- 
+ .learnmore{
+  height: 50px;
+  width: 150px;
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background-color:rgb(67, 117, 168);
+  color: white;
+  position: absolute;
+  top: 660px;
+  left: 380px;
+ }
+ .learnmore:hover{
+  scale: 1.1;
+  transition: 0.4s;
+ }
+
+ .categories{
+  height: 50px;
+  width: 200px;
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background-color:rgb(67, 117, 168);
+  color: white;
+  /* position: absolute;
+  top: 660px;
+  left: 380px; */
+  margin-left: 50px;
+  margin-top: 50px;
+ }
+
+ .medanddrugs{
+  border-radius: 30px;
+  margin-left: 50px;
+  margin-top: 70px;
+ }
+ .medanddrugs:hover{
+  scale: 1.050;
+  transition: 0.2s;
+ }
+
+ .text{
+  font-size: 20px;
+  color:rgb(67, 117, 168);
+  text-decoration: none;
+  margin-left: 93px;
+  line-height: 35px;
+ }
+.medequip{
+  border-radius: 30px;
+  margin-left: 140px;
+  margin-top:-10px;
+  position: absolute;
+  top: 1048px;
+  left: 200px;
+}
+.medequip:hover{
+  scale: 1.050;
+  transition: 0.2s;
+}
+
+.medical{
+  font-size: 20px;
+  color:rgb(67, 117, 168);
+  text-decoration: none;
+  margin-left: 385px;
+  position: absolute;
+  top: 1215px;
+}
+
+.healthsup{
+  border-radius: 30px;
+  margin-left: 145px;
+  margin-top:-10px;
+  position: absolute;
+  top: 1048px;
+  left: 485px;
+}
+.healthsup:hover{
+  scale: 1.050;
+  transition: 0.2s;
+}
+.health{
+  font-size: 20px;
+  color:rgb(67, 117, 168);
+  text-decoration: none;
+  margin-left: 680px;
+  position: absolute;
+  top: 1215px;
+}
+.surgicalsup{
+  border-radius: 30px;
+  margin-left: 120px;
+  margin-top:-10px;
+  position: absolute;
+  top: 1048px;
+  left: 800px;
+}
+.surgicalsup:hover{
+  scale: 1.050;
+  transition: 0.2s;
+}
+.surgical{
+  font-size: 20px;
+  color:rgb(67, 117, 168);
+  text-decoration: none;
+  margin-left: 975px;
+  position: absolute;
+  top: 1215px;
+}
+.diabetescare{
+  border-radius: 30px;
+  margin-left: 110px;
+  margin-top:-10px;
+  position: absolute;
+  top: 1048px;
+  left: 1100px;
+}
+.diabetescare:hover{
+  scale: 1.050;
+  transition: 0.2s;
+}
+.diabetes{
+  font-size: 20px;
+  color:rgb(67, 117, 168);
+  text-decoration: none;
+  margin-left: 1275px;
+  position: absolute;
+  top: 1215px;
+}
+
+/* BOUGHT BY YOU PAGE */
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  margin-top: 500px;
+  font-family: Arial, sans-serif;
+}
+
+/* Page Title */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Order History Section */
+.order-history {
+  margin-top: 20px;
+}
+
+.order {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.order h3 {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.order ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.order li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.order img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.order .product-info {
+  flex-grow: 1;
+}
+
+.order .product-info span {
+  display: block;
+}
+
+/* Styling for Price and Quantity */
+.order .price,
+.order .quantity {
+  font-weight: bold;
+}
+
+.order .price {
+  color: #28a745;
+}
+
+.order .quantity {
+  color: #007bff;
+}
+
+
+/* //PRODUCTS PAGE */
+
+/* .container1, .container2, .container3, .container4, .container5 {
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.Meddrug, .medquip, .healsup, .sursup, .diabetcare {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px;
+  width: 200px;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.product-card .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 10px;
+}
+
+.product-card .currency {
+  color: #888;
+} */
+
+
+/* .container1 {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Product card container */
+/* .Meddrug {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Individual product card */
+/* .product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); */
+/* } */
+
+/* Product image */
+/* .product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+} */
+
+/* Product name */
+/* .product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+} */
+
+/* Product description */
+/* .product-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+} */
+
+/* Product price */
+/* .product-price {
+  font-size: 16px;
+  color: #27ae60;
+  font-weight: bold;
+} */ 
+
+
+
+
+
+/* Container styles */
+.container1, .container2, .container3, .container4, .container5 {
+  /* padding: 20px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9; */
+
+  text-decoration: none;
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  /* text-align: center;
+  color: #333; */
+
+
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  text-decoration: none;
+}
+
+.Meddrug, .medquip, .healsup, .sursup, .diabetcare{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  text-decoration: none;
+}
+/* Product card styles */
+.product-card {
+  /* display: inline-block;
+  width: 30%;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+
+
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  /* width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px; */
+
+  text-decoration: none;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-name {
+  /* font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px; */
+ text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-description {
+  /* font-size: 0.9em;
+  color: #777;
+  margin-bottom: 10px; */
+
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.product-price {
+  /* font-size: 1.2em;
+  font-weight: bold;
+  color: #e74c3c; */
+  text-decoration: none;
+  font-size: 16px;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.currency {
+  font-size: 1em;
+  color: #333;
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+ } 
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .product-card {
+      width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+      width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
