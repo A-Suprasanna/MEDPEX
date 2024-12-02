@@ -7,6 +7,7 @@
 </head>
 <link rel="stylesheet" href="./assets/css/home.css">
 <body>
+    <header id="Home">
     <div class="catebackground">
      <div class="Homepage">
     <nav class="navigation">
@@ -26,6 +27,11 @@
         <a href="#Contact Us " class="nav">Contact Us</a>
     </nav>
     <!-- About medicines -->
+         <!-- Search Bar -->
+         <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for products..." />
+            <button id="search-button" onclick="searchProducts()">🔍</button>
+        </div>
     <p class="aboutmed">Medicines help prevent, treat, or manage various<br> health conditions by acting on specific processes <br>within the body. They include both prescription<br> and over-the-counter options. Safety relies on <br>proper dosage, timing, and awareness of possible<br> side effects or interactions. Regulatory agencies,<br> like the FDA, ensure medicines are safe and <br>effective through rigorous testing.</p>
      
     <!-- medicine with people -->
@@ -33,9 +39,12 @@
     <a href=""> <div class="learnmore">
         <p>Learn More</p>
     </div></a>
+</header>
+
 
     <!-- TOP CATEGORIES  -->
-     
+    <section>
+        <div class="catelog"id="Categories"></div>
     <div class="categories">
       <p>Top Categories</p>
     </div>
@@ -75,10 +84,12 @@
         <a href="" class="diabetes">Diabetes Care</a>
     </div>
 </div>
+</section>
 
     <!-- BOUGHT BY YOU PAGE -->
 
-
+   <section>
+    <div class="products" id="Purchases"></div>
     <div class="container">
         <h1>Bought by you</h1>
         <!-- Order History -->
@@ -89,9 +100,11 @@
 
     <div class="container1">
         <h1>Medicines and drugs</h1>
+        
         <div id="Meddrug" class="Meddrug">
-           
+            
         </div>
+        
     </div>
 
 
@@ -122,6 +135,7 @@
             
         </div>
     </div>
+</section>
 
 <!-- 
     <div class="container" id="container1">
@@ -149,6 +163,15 @@
         <div class="item-container" id="diabetcare"></div>
     </div> -->
     
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-product-details">
+                <!-- Product details will be inserted here dynamically -->
+            </div>
+        </div>
+    </div>
+    <a href="./product-details.html" id="back-to-home-btn"></a>
    <script src="./assets/Javascript/home.js"></script>
 </div>
 </body>

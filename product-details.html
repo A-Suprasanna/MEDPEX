@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="./assets/css/products.css">
+</head>
+<body>
+    <!-- Product Detail Section -->
+    <div class="product-detail-container">
+        <img id="product-image" src="" alt="Product Image">
+        <h2 id="product-name"></h2>
+        <p id="product-description"></p>
+        <p id="product-price"></p>
+        <button id="buy-now-btn">Buy Now</button>
+        <button id="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <!-- Back to Home Link -->
+    <a href="./home.html" id="back-to-home-btn">Back to Home</a>
+
+    <script>
+        // Extract query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Get the product details from the query parameters
+        const productName = urlParams.get('name');
+        const productDescription = urlParams.get('description');
+        const productPrice = urlParams.get('price');
+        const productCurrency = urlParams.get('currency');
+        const productImage = urlParams.get('image');
+
+        // Display the product details on the page
+        document.getElementById('product-image').src = productImage;
+        document.getElementById('product-name').textContent = productName;
+        document.getElementById('product-description').textContent = productDescription;
+        document.getElementById('product-price').textContent = `${productPrice} ${productCurrency}`;
+
+        // Event listeners for "Buy Now" and "Add to Cart" buttons
+        document.getElementById('buy-now-btn').addEventListener('click', function() {
+            // Logic for buying the product (e.g., proceed to checkout or payment)
+            alert('Product purchased!');
+        });
+
+        document.getElementById('add-to-cart-btn').addEventListener('click', function() {
+            // Logic for adding the product to the cart
+            alert('Product added to cart!');
+        });
+    </script>
+</body>
+</html>
+

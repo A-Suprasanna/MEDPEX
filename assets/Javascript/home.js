@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             "image": "https://tiimg.tistatic.com/fp/1/007/784/paracetamol-500mg-tablets--229.jpg",
             "name": "Paracetamol",
-            "description": "Paracetamol (also known as Acetaminophen) is a commonly used over-the-counter medication for relieving mild to moderate pain and reducing fever.",
+            "description": "Paracetamol (Acetaminophen) is a common over-the-counter medication for relieving pain and reducing fever.",
             "price": 200,
             "currency": "INR"
         },
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             "image": "https://ecommerce.genericartmedicine.com/upload/products/product-photo-745.jpeg",
             "name": "Ciprofloxacin",
-            "description": "Ciprofloxacin is an antibiotic used to treat a variety of bacterial infections, including urinary tract, respiratory, and skin infections.",
+            "description": "Ciprofloxacin is an antibiotic used to treat various bacterial infections, including urinary, respiratory, and skin infections.",
             "price": 1500,
             "currency": "INR"
         },
@@ -371,7 +371,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             "image": "https://5.imimg.com/data5/SELLER/Default/2023/8/335862709/UC/YU/KS/141647456/firstmed-professional-aneroid-sphygmomanometer-with-stethoscope-black-bp-monitor-black-500x500.png",
             "name": "Sphygmomanometer ",
-            "description": "A device used to measure blood pressure. It consists of an inflatable cuff and a gauge to measure the pressure in the arteries.",
+            "description": "A medical device used to measure blood pressure by detecting the force of blood against the walls of arteries.",
             "price": 640,
             "currency": "INR"
         },
@@ -462,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function() {
               {
                 "image": "https://rukminim2.flixcart.com/image/850/1000/ksnjp8w0/mask-respirator/a/l/y/free-size-100-surgical-mask-pack-of-100-pieces-disposable-masks-original-imag65k8q6hddzcc.jpeg?q=90&crop=false",
                 "name": "Surgical Masks",
-                "description": "Worn by surgeons and surgical staff to prevent contamination and protect both the patient and healthcare workers.",
+                "description": "These are worn by surgeons, staff to prevent contamination, protect patients and healthcare workers.",
                 "price": 285,
                 "currency": "INR"
               },
@@ -476,7 +476,7 @@ document.addEventListener('DOMContentLoaded', function() {
               {
                 "image": "https://images-cdn.ubuy.co.in/65e0c9201858a173fb205331-metene-twist-top-lancets-for-lancing.jpg",
                 "name": "Lancets",
-                "description": "Small, sharp needles used with a lancing device to obtain blood samples for glucose testing.",
+                "description": "It is a small, sharp needles used with a lancing device to obtain blood samples for glucose testing.",
                 "price": 640,
                 "currency": "INR"
               },
@@ -490,7 +490,7 @@ document.addEventListener('DOMContentLoaded', function() {
               {
                 "image": "https://m.media-amazon.com/images/I/71bBqvfDf0L.jpg",
                 "name": "Diabetic Skin Creams",
-                "description": "Moisturizing lotions designed to prevent dry, cracked skin, which is a common issue for diabetics.",
+                "description": "It's a moisturizing lotions designed to prevent dry, cracked skin, which is a common issue for diabetics.",
                 "price": 380,
                 "currency": "INR"
               },
@@ -505,39 +505,55 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     function generateHTML(data) {
-        let htmlContent = '';
+      let htmlContent = '';
 
-        data.forEach(item => {
-            htmlContent += `
-                <div class="product-card">
-                <a href="">
-                    <img src="${item.image}" alt="${item.name}" class="product-image"></a>
-                     <a href=""><h3 class="product-name">${item.name}</h3></a>
-                    <p class="product-description">${item.description}</p>
-                    <p class="product-price">${item.price} <span class="currency">${item.currency}</span></p>
-                
-                </div>
-            `;
-        });
+      data.forEach(item => {
+          htmlContent += `
+              <div class="product-card">
+                  <a href="#">
+                      <img src="${item.image}" alt="${item.name}" class="product-image">
+                  </a>
+                  <a href="#"><h3 class="product-name">${item.name}</h3></a>
+                  <p class="product-description">${item.description}</p>
+                  <p class="product-price">${item.price} <span class="currency">${item.currency}</span></p>
+                  <button class="buy-now-btn" data-product-id="${item.name}" data-product-details='${JSON.stringify(item)}'>Buy now</button>
+                  <button class="add-to-cart-btn" data-product-id="${item.name}">Add to cart</button>
+              </div>
+          `;
+      });
 
-        return htmlContent;
-    }
+      return htmlContent;
+  }
 
-    // Fetch the first 5 products into Meddrug
-    document.getElementById('Meddrug').innerHTML = generateHTML(data.slice(0, 5));
+  // Fetch the first 5 products into Meddrug
+  document.getElementById('Meddrug').innerHTML = generateHTML(data.slice(0, 5));
 
-    // Fetch the next 5 products into medquip
-    document.getElementById('medquip').innerHTML = generateHTML(data.slice(5, 10));
+  // Fetch the next 5 products into medquip
+  document.getElementById('medquip').innerHTML = generateHTML(data.slice(5, 10));
 
-    // Fetch the next 5 products into healsup
-    document.getElementById('healsup').innerHTML = generateHTML(data.slice(10, 15));
+  // Fetch the next 5 products into healsup
+  document.getElementById('healsup').innerHTML = generateHTML(data.slice(10, 15));
 
-    // Fetch the next 5 products into sursup
-    document.getElementById('sursup').innerHTML = generateHTML(data.slice(15, 20));
+  // Fetch the next 5 products into sursup
+  document.getElementById('sursup').innerHTML = generateHTML(data.slice(15, 20));
 
-    // Fetch the last 5 products into diabetcare
-    document.getElementById('diabetcare').innerHTML = generateHTML(data.slice(20, 25));
+  // Fetch the last 5 products into diabetcare
+  document.getElementById('diabetcare').innerHTML = generateHTML(data.slice(20, 25));
+
+  // Event listener for the "Buy Now" buttons
+  document.querySelectorAll('.buy-now-btn').forEach(button => {
+      button.addEventListener('click', function() {
+          const productDetails = JSON.parse(button.getAttribute('data-product-details'));
+          const productDetailsQuery = new URLSearchParams({
+              name: productDetails.name,
+              description: productDetails.description,
+              price: productDetails.price,
+              currency: productDetails.currency,
+              image: productDetails.image
+          }).toString();
+          
+          // Redirect to the product details page with the product details in the URL query parameters
+          window.location.href = `product-details.html?${productDetailsQuery}`;
+      });
+  });
 });
-
- 
-
