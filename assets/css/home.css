@@ -412,15 +412,42 @@ h1 {
       width: 100%;
   }
 }
-
-
-
-
 #product-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+}
+
+.feature{
+  position: absolute;
+  top: 1800px;
+}
+
+.medicinesdrug{
+  position: absolute;
+  top: 1900;
+}
+
+.medicdrugs{
+  position: absolute;
+  top: 1775px;
+}
+.mediequip{
+  position: absolute;
+  top: 2250px;
+}
+.healthsupply{
+  position: absolute;
+  top: 2800px;
+}
+.surgesupply{
+  position: absolute;
+  top: 3350px;
+}
+.diabetescares{
+  position: absolute;
+  top: 3800px;
 }
 
 
@@ -429,3 +456,104 @@ h1 {
 
 
 
+
+
+
+/* 
+
+
+.product-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  color: #333;
+} */
+
+.add-to-cart-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 100px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #218838;
+}
+
+.cart-section {
+  position: absolute;
+  top: 100;
+  right: 0;
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cart-item button {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-item button:hover {
+  background-color: darkred;
+}
+
+#checkout-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+#checkout-btn:hover {
+  background-color: #0056b3;
+}

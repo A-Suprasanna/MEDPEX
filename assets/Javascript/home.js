@@ -1,34 +1,3 @@
-// fetch('./home.html') // Replace with the actual path to the HTML file
-//     .then(response => response.text()) // Read the HTML as text
-//     .then(htmlString => {
-//         // Create a temporary DOM element to parse the HTML
-//         const parser = new DOMParser();
-//         const doc = parser.parseFromString(htmlString, 'text/html');
-
-//         // Extract meaningful data
-//         const jsonData = {
-//             title: doc.title,
-//             styles: Array.from(doc.querySelectorAll('link[rel="stylesheet"]')).map(link => link.href),
-//             navigation: Array.from(doc.querySelectorAll('nav a')).map(link => ({
-//                 href: link.getAttribute('href'),
-//                 label: link.textContent.trim()
-//             })),
-//             aboutMedicines: doc.querySelector('.aboutmed')?.textContent.trim(),
-//             images: Array.from(doc.querySelectorAll('img')).map(img => ({
-//                 src: img.src,
-//                 alt: img.alt || 'No alt text',
-//                 height: img.height,
-//                 width: img.width
-//             }))
-//         };
-
-//         console.log("Extracted JSON:", jsonData);
-//     })
-//     .catch(error => {
-//         console.error("Error fetching or processing HTML:", error);
-//     });
-
-
 // BOUGHT BY YOU PAGE
 
 // script.js
@@ -101,228 +70,6 @@ function renderOrders() {
 
 // Call the renderOrders function to display orders when the page loads
 renderOrders();
-
-// PRODUCTS PAGE
-// Your JSON data
-// const products = [
-//     {
-//       "image": "https://tiimg.tistatic.com/fp/1/007/784/paracetamol-500mg-tablets--229.jpg",
-//       "name": "Paracetamol",
-//       "description": "Paracetamol (also known as Acetaminophen) is a commonly used over-the-counter medication for relieving mild to moderate pain and reducing fever.",
-//       "price": 200,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://5.imimg.com/data5/SELLER/Default/2023/7/330506870/UM/GZ/QO/135658020/aspirin-dispersible-tablets-500x500.jpgl",
-//       "name": "Aspirin",
-//       "description": "Aspirin is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce pain, inflammation, and fever, and to prevent blood clots.",
-//       "price": 290,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://5.imimg.com/data5/SELLER/Default/2024/1/377899921/DI/ER/FI/101293874/azithromycin-500-mg-tablets-500x500.jpg",
-//       "name": "Azithromycin",
-//       "description": "Azithromycin is an antibiotic used to treat various bacterial infections, including respiratory, skin, and ear infections.",
-//       "price": 260,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSmVZb-jtVwBvrCazI9rv2Coet6__dJT3Zhw&s",
-//       "name": "Morphine",
-//       "description": "Morphine is a powerful opioid pain medication used to manage severe pain, particularly after surgery or injury.",
-//       "price": 400,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://ecommerce.genericartmedicine.com/upload/products/product-photo-745.jpeg",
-//       "name": "Ciprofloxacin",
-//       "description": "Ciprofloxacin is an antibiotic used to treat a variety of bacterial infections, including urinary tract, respiratory, and skin infections.",
-//       "price": 1500,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://m.media-amazon.com/images/I/41i+zWBppZL._AC_UF1000,1000_QL80_.jpg",
-//       "name": "Stethoscope ",
-//       "description": "A device used by doctors to listen to internal sounds of the body, such as heartbeats and lung sounds.",
-//       "price": 750,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://5.imimg.com/data5/SELLER/Default/2023/8/335862709/UC/YU/KS/141647456/firstmed-professional-aneroid-sphygmomanometer-with-stethoscope-black-bp-monitor-black-500x500.png",
-//       "name": "Sphygmomanometer ",
-//       "description": "A device used to measure blood pressure. It consists of an inflatable cuff and a gauge to measure the pressure in the arteries.",
-//       "price": 640,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://m.media-amazon.com/images/I/610lBxabhTL.jpg",
-//       "name": "Thermometer",
-//       "description": "A device used to measure body temperature. It can be digital or mercury-based and is commonly used to check for fever.",
-//       "price": 650,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsDp-V7E2ha_-fzAxQEKE6FnSSGaBUAMoAQ&s",
-//       "name": "Otoscope",
-//       "description": "A handheld device used by doctors to examine the ears, specifically the ear canal and eardrum.",
-//       "price": 380,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://nationalindco.com/wp-content/uploads/2023/05/ophthalmoscope_beta_200s_with_rechargeable_battery_handle201853153342179_b-450x450.jpg",
-//       "name": "Ophthalmoscope",
-//       "description": "An instrument used by doctors to inspect the inside of the eye, including the retina, optic disc, and blood vessels.",
-//       "price": 285,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSrseaqKdYKnJiHUVmknYXIysiSzoEyu1_vg&s",
-//       "name": "Immune Boosting Vitamin C ",
-//       "description": "Supports immune health, reduces the severity of colds, and promotes skin health.",
-//       "price": 200,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZaXN2MUwEXKy98KyPLg-bYT-HCQD64t8M7w&s",
-//       "name": "Pure Omega-3 Fish Oil",
-//       "description": "Rich in EPA and DHA, this supplement supports heart health, brain function, and reduces inflammation.",
-//       "price": 290,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://images-eu.ssl-images-amazon.com/images/I/61sxYaxdcoL._AC_UL600_SR600,600_.jpg",
-//       "name": "Natural Iron Supplement",
-//       "description":"Supports red blood cell production, combats fatigue, and enhances overall energy levels.",
-//       "price": 260,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://m.media-amazon.com/images/I/7119ktSu-aL._AC_UF1000,1000_QL80_.jpg",
-//       "name": "Green Tea Extract Fat Burner",
-//       "description": "Rich in antioxidants, helps boost metabolism and supports weight loss.",
-//       "price": 400,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://rukminim2.flixcart.com/image/850/1000/kmds4nk0/vitamin-supplement/z/6/8/60-organic-turmeric-curcumin-extract-60-caps-perennial-original-imagfanvyhe9tvvx.jpeg?q=90&crop=false",
-//       "name": "Organic Turmeric Curcumin Extract",
-//       "description":"Offers potent anti-inflammatory benefits and supports joint and brain health.",
-//       "price": 1500,
-//       "currency": "INR"
-//     }
-//   ];
-  
-//   // Function to create product cards
-//   function createProductCard(product) {
-//       return `
-//       <div class="product-card">
-//           <img src="${product.image}" alt="${product.name}">
-//           <h3>${product.name}</h3>
-//           <p>${product.description}</p>
-//           <p class="price">${product.price}<span class="currency">${product.currency}</span></p>
-//       </div>`;
-//   }
-  
-//   // Function to distribute the products into the correct containers
-//   function distributeProducts() {
-//       let container1 = document.getElementById('Meddrug');
-//       let container2 = document.getElementById('medquip');
-//       let container3 = document.getElementById('healsup');
-//       let container4 = document.getElementById('sursup');
-//       let container5 = document.getElementById('diabetcare');
-  
-//       // Populate containers
-//       for (let i = 0; i < 5; i++) {
-//           container1.innerHTML += createProductCard(products[i]);
-//       }
-  
-//       for (let i = 5; i < 10; i++) {
-//           container2.innerHTML += createProductCard(products[i]);
-//       }
-  
-//       for (let i = 10; i < 15; i++) {
-//           container3.innerHTML += createProductCard(products[i]);
-//       }
-  
-//       for (let i = 15; i < 20; i++) {
-//           container4.innerHTML += createProductCard(products[i]);
-//       }
-  
-//       for (let i = 20; i < products.length; i++) {
-//           container5.innerHTML += createProductCard(products[i]);
-//       }
-//   }
-  
-//   // Call the function to distribute the products
-//   window.onload = distributeProducts;
-  
-// JSON Data
-// const products = [
-//     {
-//       "image": "https://tiimg.tistatic.com/fp/1/007/784/paracetamol-500mg-tablets--229.jpg",
-//       "name": "Paracetamol",
-//       "description": "Paracetamol (also known as Acetaminophen) is a commonly used over-the-counter medication for relieving mild to moderate pain and reducing fever.",
-//       "price": 200,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVPAAFFikS6WZtum9dhWXhzUGnhCOh5bMb1g&s",
-//       "name": "Aspirin",
-//       "description": "Aspirin is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce pain, inflammation, and fever, and to prevent blood clots.",
-//       "price": 290,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://5.imimg.com/data5/SELLER/Default/2024/1/377899921/DI/ER/FI/101293874/azithromycin-500-mg-tablets-500x500.jpg",
-//       "name": "Azithromycin",
-//       "description": "Azithromycin is an antibiotic used to treat various bacterial infections, including respiratory, skin, and ear infections.",
-//       "price": 260,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSmVZb-jtVwBvrCazI9rv2Coet6__dJT3Zhw&s",
-//       "name": "Morphine",
-//       "description": "Morphine is a powerful opioid pain medication used to manage severe pain, particularly after surgery or injury.",
-//       "price": 400,
-//       "currency": "INR"
-//     },
-//     {
-//       "image": "https://ecommerce.genericartmedicine.com/upload/products/product-photo-745.jpeg",
-//       "name": "Ciprofloxacin",
-//       "description": "Ciprofloxacin is an antibiotic used to treat a variety of bacterial infections, including urinary tract, respiratory, and skin infections.",
-//       "price": 1500,
-//       "currency": "INR"
-//     }
-//   ];
-  
-//   // Function to create product cards
-//   function displayProducts() {
-//       const medDrugDiv = document.getElementById('Meddrug');
-  
-//       products.forEach(product => {
-//           // Create product card
-//           const productCard = document.createElement('div');
-//           productCard.classList.add('product-card');
-  
-//           // Set the HTML content of the card
-//           productCard.innerHTML = `
-//               <img src="${product.image}" alt="${product.name}" class="product-image">
-//               <h2 class="product-name">${product.name}</h2>
-//               <p class="product-description">${product.description}</p>
-//               <div class="product-price">${product.currency} ${product.price}</div>
-//           `;
-  
-//           // Append the product card to the container
-//           medDrugDiv.appendChild(productCard);
-//       });
-//   }
-  
-//   // Call the function to display products
-//   displayProducts();
-  
-
-
-  
 
 document.addEventListener('DOMContentLoaded', function() {
     const data = [
@@ -556,4 +303,109 @@ document.addEventListener('DOMContentLoaded', function() {
           window.location.href = `product-details.html?${productDetailsQuery}`;
       });
   });
+});
+
+
+
+
+
+
+const products = [
+  {
+    name: 'Wireless Mouse',
+    price: 25,
+    image: 'https://via.placeholder.com/150',
+  },
+  {
+    name: 'Keyboard',
+    price: 45,
+    image: 'https://via.placeholder.com/150',
+  },
+  {
+    name: 'Laptop Stand',
+    price: 30,
+    image: 'https://via.placeholder.com/150',
+  }
+];
+
+// Initialize the cart array
+let cart = [];
+
+// Function to render products dynamically
+function renderProducts() {
+  const productList = document.querySelector('.product-list');
+  
+  products.forEach(product => {
+    const productCard = document.createElement('div');
+    productCard.classList.add('product-card');
+    
+    productCard.innerHTML = `
+      <img src="${product.image}" alt="${product.name}">
+      <h3 class="product-name">${product.name}</h3>
+      <p class="product-price">$${product.price}</p>
+      <button class="add-to-cart-btn" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">
+        Add to Cart
+      </button>
+    `;
+    
+    productList.appendChild(productCard);
+  });
+}
+
+// Function to render the cart
+function renderCart() {
+  const cartItemsContainer = document.getElementById('cart-items');
+  cartItemsContainer.innerHTML = ''; // Clear previous cart items
+  
+  cart.forEach((item, index) => {
+    const cartItem = document.createElement('li');
+    cartItem.classList.add('cart-item');
+    
+    cartItem.innerHTML = `
+      <span>${item.name} - $${item.price}</span>
+      <button class="remove-item-btn" data-index="${index}">Remove</button>
+    `;
+    
+    cartItemsContainer.appendChild(cartItem);
+  });
+}
+
+// Function to handle the "Add to Cart" button click
+document.addEventListener('click', function(e) {
+  if (e.target && e.target.classList.contains('add-to-cart-btn')) {
+    const productName = e.target.getAttribute('data-name');
+    const productPrice = e.target.getAttribute('data-price');
+    const productImage = e.target.getAttribute('data-image');
+    
+    // Add the product to the cart
+    cart.push({ name: productName, price: productPrice, image: productImage });
+    
+    // Re-render the cart
+    renderCart();
+  }
+});
+
+// Function to remove item from the cart
+document.addEventListener('click', function(e) {
+  if (e.target && e.target.classList.contains('remove-item-btn')) {
+    const index = e.target.getAttribute('data-index');
+    
+    // Remove the item from the cart
+    cart.splice(index, 1);
+    
+    // Re-render the cart
+    renderCart();
+  }
+});
+
+// Render products on page load
+renderProducts();
+
+// Checkout functionality (just a placeholder for now)
+document.getElementById('checkout-btn').addEventListener('click', function() {
+  if (cart.length > 0) {
+    alert('Proceeding to checkout!');
+  } else {
+    alert('Your cart is empty!');
+  }
 });

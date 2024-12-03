@@ -50,38 +50,38 @@
     </div>
 
    <div>
-    <a href=""><img src="./assets/images/Medicines_and_drugs.png" height="165" width="250" class="medanddrugs"></a>
+    <a href="#medicdrugs"><img src="./assets/images/Medicines_and_drugs.png" height="165" width="250" class="medanddrugs"></a>
    </div>
     <div>
-        <a href="" class="text">Medicines and Drugs</a>
+        <a href="#medicdrugs" class="text">Medicines and Drugs</a>
     </div>
     
     <div>
-    <a href=""><img src="./assets/images/medical_equipment.jpg"  height="165" width="250" class="medequip"></a>
+    <a href="#mediequip"><img src="./assets/images/medical_equipment.jpg"  height="165" width="250" class="medequip"></a>
     </div>
     <div>
-    <a href="" class="medical">Medical equipment</a>
+    <a href="#mediequip" class="medical">Medical equipment</a>
     </div>
      
     <div>
-        <a href=""><img src="./assets/images/health_supplements.webp"  height="165" width="250" class="healthsup"></a>
+        <a href="#healthsupply"><img src="./assets/images/health_supplements.webp"  height="165" width="250" class="healthsup"></a>
     </div>
     <div>
-        <a href="" class="health">Health supplements</a>
-    </div>
-
-    <div>
-        <a href=""><img src="./assets/images/Surgical_supplies.avif"   height="165" width="250" class="surgicalsup"></a>
-    </div>
-    <div>
-        <a href="" class="surgical">Surgical Supplies</a>
+        <a href="#healthsupply" class="health">Health supplements</a>
     </div>
 
     <div>
-        <a href=""><img src="./assets/images/diabetes_care.jpg"  height="165" width="250" class="diabetescare"></a>
+        <a href="#surgesupply"><img src="./assets/images/Surgical_supplies.avif"   height="165" width="250" class="surgicalsup"></a>
     </div>
     <div>
-        <a href="" class="diabetes">Diabetes Care</a>
+        <a href="#surgesupply" class="surgical">Surgical Supplies</a>
+    </div>
+
+    <div>
+        <a href="#diabetescares"><img src="./assets/images/diabetes_care.jpg"  height="165" width="250" class="diabetescare"></a>
+    </div>
+    <div>
+        <a href="#diabetescares" class="diabetes">Diabetes Care</a>
     </div>
 </div>
 </section>
@@ -100,7 +100,7 @@
 
     <div class="container1">
         <h1>Medicines and drugs</h1>
-        
+        <div class="medicdrugs" id="medicdrugs"></div>
         <div id="Meddrug" class="Meddrug">
             
         </div>
@@ -110,6 +110,7 @@
 
     <div class="container2">
         <h1>Medical equipment</h1>
+        <div class="mediequip" id="mediequip"></div>
         <div id="medquip" class="medquip">
         
         </div>
@@ -117,6 +118,7 @@
 
     <div class="container3">
         <h1>Health supplements</h1>
+        <div class="healthsupply" id="healthsupply"></div>
         <div id="healsup" class="healsup">
          
         </div>
@@ -124,6 +126,7 @@
 
     <div class="container4">
         <h1>Surgical supplies</h1>
+        <div class="surgesupply" id="surgesupply"></div>
         <div id="sursup" class="sursup">
          
         </div>
@@ -131,38 +134,14 @@
 
     <div class="container5">
         <h1>Diabetes care</h1>
+        <div class="diabetescare" id="diabetescares"></div>
         <div id="diabetcare" class="diabetcare">
             
         </div>
     </div>
 </section>
-
-<!-- 
-    <div class="container" id="container1">
-        <h1>Medicines and Drugs</h1>
-        <div class="item-container" id="Meddrug"></div>
-    </div>
-
-    <div class="container" id="container2">
-        <h1>Medical Equipment</h1>
-        <div class="item-container" id="medquip"></div>
-    </div>
-
-    <div class="container" id="container3">
-        <h1>Health Supplements</h1>
-        <div class="item-container" id="healsup"></div>
-    </div>
-
-    <div class="container" id="container4">
-        <h1>Surgical Supplies</h1>
-        <div class="item-container" id="sursup"></div>
-    </div>
-
-    <div class="container" id="container5">
-        <h1>Diabetes Care</h1>
-        <div class="item-container" id="diabetcare"></div>
-    </div> -->
-    
+    <section>
+        <div class="feature" id="Featured"></div>
     <div id="product-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -171,8 +150,27 @@
             </div>
         </div>
     </div>
+</section>
+
+
+
+
+<div class="product-list">
+    <!-- Product Cards will be inserted dynamically by JS -->
+  </div>
+
+  <!-- Cart Section -->
+  <div class="cart-section">
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items">
+      <!-- Cart items will be listed here -->
+    </ul>
+    <button id="checkout-btn">Proceed to Checkout</button>
+  </div>
+
     <a href="./product-details.html" id="back-to-home-btn"></a>
    <script src="./assets/Javascript/home.js"></script>
+</div>
 </div>
 </body>
 </html>
