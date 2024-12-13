@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 1s ease-in-out; /* Adjust for slower transition */
+        }
+
+        .carousel-slide {
+            flex: 0 0 33.333%; /* Each card takes 1/3rd of the width */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .carousel-slide div {
+            background-color: #808080;
+            border-radius: 15px;
+            width: 80%;
+            padding: 30px 0;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Our Gallery</h1>
+
+<div class="carousel-container">
+    <div class="carousel-slides">
+        <div class="carousel-slide">
+            <div>Medicine Image 1</div>
+        </div>
+        <div class="carousel-slide">
+            <div>Medicine Image 2</div>
+        </div>
+        <div class="carousel-slide">
+            <div>Medicine Image 3</div>
+        </div>
+        <div class="carousel-slide">
+            <div>Medicine Image 4</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const slides = document.querySelector('.carousel-slides');
+    const slideCount = slides.children.length;
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        slides.style.transform = `translateX(-${currentIndex * 100 / 3}%)`;
+    }
+
+    function slideNext() {
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateCarousel();
+    }
+
+    // Automatically slide every 3 seconds (3000ms)
+    setInterval(slideNext, 3000);
+</script>
+</body>
+</html>

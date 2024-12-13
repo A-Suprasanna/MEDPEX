@@ -399,6 +399,25 @@ h1 {
   margin-top: 10px;
   margin-left: 10px;
  }
+ .buy-now-btn{
+  background-color: rgb(67, 117, 168);
+  height:25px;
+  margin-left: 20px;
+  margin-top: 10px;
+  font-weight: bolder;
+  color: white;
+  font-family: Arial, sans-serif;
+ }
+
+ .add-to-cart-btn{
+  background-color: rgb(67, 117, 168);
+  height:25px;
+  margin-left: 25px;
+  margin-top: 10px;
+  font-weight: bolder;
+  color: white;
+  font-family: Arial, sans-serif;
+ }
 
 /* Responsive layout */
 @media (max-width: 768px) {
@@ -450,110 +469,153 @@ h1 {
   top: 3800px;
 }
 
+/* ABOUT US */
 
-
-
-
-
-
-
-
-
-/* 
-
-
-.product-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-.product-card {
-  background-color: white;
-  border: 1px solid #ddd;
-  margin: 10px;
-  padding: 15px;
-  width: 200px;
+.aboutus{
+  height: 230px;
+  width: 600px;
+  /* background-color:rgb(67, 117, 168); */
   text-align: center;
-}
-
-.product-card img {
-  width: 100%;
-  height: auto;
-}
-
-.product-name {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-.product-price {
-  font-size: 1.1rem;
-  color: #333;
-} */
-
-.add-to-cart-btn {
-  background-color: #28a745;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  font-weight: bolder;
+  color:black;
+  border-radius: 20px;
+  margin-left: 750px;
   margin-top: 100px;
 }
-
-.add-to-cart-btn:hover {
-  background-color: #218838;
+.aboutus:hover{
+  scale: 1.03;
+  transition: 0.4s;
+}
+.headingaboutus{
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: Arial, sans-serif;
+  margin-left: 675px;
+  margin-top: 50px;
 }
 
-.cart-section {
+#medpexlogo{
+  width: 550px;
+  height: 350px;
+  background-image: none;
+  text-align: center;
+  line-height: 200px;
+  margin-top: -255px;
+  margin-left: 100px;
+  border-radius: 90px;
+}
+.medlogo{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 90px;
+}
+.medpexlogo:hover{
+  scale: 1.03;
+  transition: 0.4s;
+}
+.aboutmedpex{
   position: absolute;
-  top: 100;
-  right: 0;
-  width: 300px;
-  background-color: white;
-  padding: 20px;
-  border-left: 1px solid #ddd;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  top: 2000px;
 }
+/* 
+//CAROUSAL IMAGES */
 
-.cart-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+/* .carousel-container {
+  width: 100%;
+  height: 100%;
+ 
+  max-width: 1300px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
 }
-
-#cart-items {
-  list-style: none;
-  padding: 0;
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
-
-.cart-item {
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+.carousel-slide img {
+  width: 100%;
+  height: 600px;
+  display: block;
+}
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  transform: translateY(-50%);
 }
-
-.cart-item button {
-  background-color: red;
-  color: white;
-  padding: 5px 10px;
+.carousel-buttons button {
+  background-color: rgba(0, 0, 0, 0.5);
   border: none;
-  cursor: pointer;
-}
-
-.cart-item button:hover {
-  background-color: darkred;
-}
-
-#checkout-btn {
-  background-color: #007bff;
   color: white;
   padding: 10px;
-  width: 100%;
-  border: none;
   cursor: pointer;
 }
+.carousel-buttons button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+} */
 
-#checkout-btn:hover {
-  background-color: #0056b3;
+
+
+/* .carousel-container {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
 }
+.carousel-slides {
+  display: flex;
+  transition: transform 1.5s ease-in-out;
+}
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+.carousel-slide img {
+  width: 100%;
+  display: block;
+} */
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 1s ease-in-out; /* Adjust for slower transition */
+}
+
+.carousel-slide {
+  flex: 0 0 33.333%; /* Each card takes 1/3rd of the width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.carousel-slide div {
+  background-color: #808080;
+  border-radius: 15px;
+  width: 10%;
+  padding: 30px 0;
+  color: white;
+  font-size: 18px;
+}
+
+
+

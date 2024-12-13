@@ -306,106 +306,77 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+//MEDPEX logo 
+const medpexLogoDiv = document.getElementById('medpexlogo');
+        
+// Create an img element
+const imgElement = document.createElement('img');
+
+// Set the src attribute to your image URL
+imgElement.src = './assets/images/aboutmedpex.png';
+imgElement.alt = 'Medpex Logo';
+
+// Append the img element to the div
+medpexLogoDiv.appendChild(imgElement);
+
+//CAROUSAL IMAGES
+
+// const slides = document.querySelector('.carousel-slides');
+// const slidesCount = slides.children.length;
+// let currentIndex = 0;
+
+// document.getElementById('next').addEventListener('click', () => {
+//     currentIndex = (currentIndex + 1) % slidesCount;
+//     updateCarousel();
+// });
+
+// document.getElementById('prev').addEventListener('click', () => {
+//     currentIndex = (currentIndex - 1 + slidesCount) % slidesCount;
+//     updateCarousel();
+// });
+
+// function updateCarousel() {
+//     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+// }
+
+// const slides = document.querySelector('.carousel-slides');
+// const slidesCount = slides.children.length;
+// let currentIndex = 0;
+
+// function slideImages() {
+//     currentIndex = (currentIndex + 1) % slidesCount; // Move to the next slide
+//     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+// }
+
+// // Automatically slide every second (1000ms)
+// setInterval(slideImages, 1000);
+
+
+const slides = document.querySelector('.carousel-slides');
+    const slideCount = slides.children.length;
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        slides.style.transform = `translateX(-${currentIndex * 100 / 3}%)`;
+    }
+
+    function slideNext() {
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateCarousel();
+    }
+
+    // Automatically slide every 3 seconds (3000ms)
+    setInterval(slideNext, 3000);
 
 
 
 
-const products = [
-  {
-    name: 'Wireless Mouse',
-    price: 25,
-    image: 'https://via.placeholder.com/150',
-  },
-  {
-    name: 'Keyboard',
-    price: 45,
-    image: 'https://via.placeholder.com/150',
-  },
-  {
-    name: 'Laptop Stand',
-    price: 30,
-    image: 'https://via.placeholder.com/150',
-  }
-];
 
-// Initialize the cart array
-let cart = [];
 
-// Function to render products dynamically
-function renderProducts() {
-  const productList = document.querySelector('.product-list');
-  
-  products.forEach(product => {
-    const productCard = document.createElement('div');
-    productCard.classList.add('product-card');
-    
-    productCard.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
-      <h3 class="product-name">${product.name}</h3>
-      <p class="product-price">$${product.price}</p>
-      <button class="add-to-cart-btn" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">
-        Add to Cart
-      </button>
-    `;
-    
-    productList.appendChild(productCard);
-  });
-}
 
-// Function to render the cart
-function renderCart() {
-  const cartItemsContainer = document.getElementById('cart-items');
-  cartItemsContainer.innerHTML = ''; // Clear previous cart items
-  
-  cart.forEach((item, index) => {
-    const cartItem = document.createElement('li');
-    cartItem.classList.add('cart-item');
-    
-    cartItem.innerHTML = `
-      <span>${item.name} - $${item.price}</span>
-      <button class="remove-item-btn" data-index="${index}">Remove</button>
-    `;
-    
-    cartItemsContainer.appendChild(cartItem);
-  });
-}
 
-// Function to handle the "Add to Cart" button click
-document.addEventListener('click', function(e) {
-  if (e.target && e.target.classList.contains('add-to-cart-btn')) {
-    const productName = e.target.getAttribute('data-name');
-    const productPrice = e.target.getAttribute('data-price');
-    const productImage = e.target.getAttribute('data-image');
-    
-    // Add the product to the cart
-    cart.push({ name: productName, price: productPrice, image: productImage });
-    
-    // Re-render the cart
-    renderCart();
-  }
-});
 
-// Function to remove item from the cart
-document.addEventListener('click', function(e) {
-  if (e.target && e.target.classList.contains('remove-item-btn')) {
-    const index = e.target.getAttribute('data-index');
-    
-    // Remove the item from the cart
-    cart.splice(index, 1);
-    
-    // Re-render the cart
-    renderCart();
-  }
-});
 
-// Render products on page load
-renderProducts();
 
-// Checkout functionality (just a placeholder for now)
-document.getElementById('checkout-btn').addEventListener('click', function() {
-  if (cart.length > 0) {
-    alert('Proceeding to checkout!');
-  } else {
-    alert('Your cart is empty!');
-  }
-});
+
+
