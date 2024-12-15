@@ -3,41 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatic Carousel</title>
+    <title>3-Image Carousel with Looping</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
 
         .carousel-container {
             position: relative;
-            max-width: 100%;
-            overflow: hidden;
+            max-width: 80%;
             margin: auto;
+            overflow: hidden;
             padding: 20px 0;
         }
 
         .carousel-slides {
             display: flex;
-            transition: transform 1s ease-in-out; /* Adjust for slower transition */
+            transition: transform 0.5s ease-in-out;
         }
 
         .carousel-slide {
-            flex: 0 0 33.333%; /* Each card takes 1/3rd of the width */
+            flex: 0 0 33.333%; /* Each image takes 1/3rd of the container width */
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px;
         }
 
-        .carousel-slide div {
-            background-color: #808080;
-            border-radius: 15px;
+        .carousel-slide img {
             width: 80%;
-            padding: 30px 0;
+            height: auto;
+            opacity: 0.7;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .carousel-slide img.active {
+            transform: scale(1.2); /* Enlarge the middle image */
+            opacity: 1; /* Fully visible */
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
             color: white;
-            font-size: 18px;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+
+        .arrow-left {
+            left: 10px;
+        }
+
+        .arrow-right {
+            right: 10px;
         }
     </style>
 </head>
@@ -48,36 +73,61 @@
 <div class="carousel-container">
     <div class="carousel-slides">
         <div class="carousel-slide">
-            <div>Medicine Image 1</div>
+            <img src="https://via.placeholder.com/150?text=1" alt="Image 1">
         </div>
         <div class="carousel-slide">
-            <div>Medicine Image 2</div>
+            <img src="https://via.placeholder.com/150?text=2" alt="Image 2" class="active">
         </div>
         <div class="carousel-slide">
-            <div>Medicine Image 3</div>
+            <img src="https://via.placeholder.com/150?text=3" alt="Image 3">
         </div>
         <div class="carousel-slide">
-            <div>Medicine Image 4</div>
+            <img src="https://via.placeholder.com/150?text=4" alt="Image 4">
+        </div>
+        <div class="carousel-slide">
+            <img src="https://via.placeholder.com/150?text=5" alt="Image 5">
         </div>
     </div>
+    <!-- Arrows -->
+    <button class="arrow arrow-left">&#10094;</button>
+    <button class="arrow arrow-right">&#10095;</button>
 </div>
 
 <script>
     const slides = document.querySelector('.carousel-slides');
-    const slideCount = slides.children.length;
-    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-slide img');
+    const prevButton = document.querySelector('.arrow-left');
+    const nextButton = document.querySelector('.arrow-right');
+    const visibleImages = 3;
+    let currentIndex = 1; // Start with the second image in the middle
 
     function updateCarousel() {
-        slides.style.transform = `translateX(-${currentIndex * 100 / 3}%)`;
+        // Translate the slides container
+        slides.style.transform = `translateX(-${(currentIndex - 1) * 100 / visibleImages}%)`;
+
+        // Update the 'active' class to highlight the middle image
+        images.forEach((img, index) => {
+            img.classList.remove('active');
+            if (index === currentIndex) {
+                img.classList.add('active');
+            }
+        });
     }
 
-    function slideNext() {
-        currentIndex = (currentIndex + 1) % slideCount;
+    // Event listeners for the arrows
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back to the last image if at the start
         updateCarousel();
-    }
+    });
 
-    // Automatically slide every 3 seconds (3000ms)
-    setInterval(slideNext, 3000);
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image if at the end
+        updateCarousel();
+    });
+
+    // Initial state
+    updateCarousel();
 </script>
+
 </body>
 </html>

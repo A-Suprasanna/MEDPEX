@@ -321,52 +321,39 @@ medpexLogoDiv.appendChild(imgElement);
 
 //CAROUSAL IMAGES
 
-// const slides = document.querySelector('.carousel-slides');
-// const slidesCount = slides.children.length;
-// let currentIndex = 0;
-
-// document.getElementById('next').addEventListener('click', () => {
-//     currentIndex = (currentIndex + 1) % slidesCount;
-//     updateCarousel();
-// });
-
-// document.getElementById('prev').addEventListener('click', () => {
-//     currentIndex = (currentIndex - 1 + slidesCount) % slidesCount;
-//     updateCarousel();
-// });
-
-// function updateCarousel() {
-//     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-// }
-
-// const slides = document.querySelector('.carousel-slides');
-// const slidesCount = slides.children.length;
-// let currentIndex = 0;
-
-// function slideImages() {
-//     currentIndex = (currentIndex + 1) % slidesCount; // Move to the next slide
-//     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-// }
-
-// // Automatically slide every second (1000ms)
-// setInterval(slideImages, 1000);
-
-
 const slides = document.querySelector('.carousel-slides');
-    const slideCount = slides.children.length;
-    let currentIndex = 0;
+const images = document.querySelectorAll('.carousel-slide img');
+const prevButton = document.querySelector('.arrow-left');
+const nextButton = document.querySelector('.arrow-right');
+const visibleImages = 3;
+let currentIndex = 1; // Start with the second image in the middle
 
-    function updateCarousel() {
-        slides.style.transform = `translateX(-${currentIndex * 100 / 3}%)`;
-    }
+function updateCarousel() {
+    // Translate the slides container
+    slides.style.transform = `translateX(-${(currentIndex - 1) * 100 / visibleImages}%)`;
 
-    function slideNext() {
-        currentIndex = (currentIndex + 1) % slideCount;
-        updateCarousel();
-    }
+    // Update the 'active' class to highlight the middle image
+    images.forEach((img, index) => {
+        img.classList.remove('active');
+        if (index === currentIndex) {
+            img.classList.add('active');
+        }
+    });
+}
 
-    // Automatically slide every 3 seconds (3000ms)
-    setInterval(slideNext, 3000);
+// Event listeners for the arrows
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back to the last image if at the start
+    updateCarousel();
+});
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image if at the end
+    updateCarousel();
+});
+
+// Initial state
+updateCarousel();
 
 
 
