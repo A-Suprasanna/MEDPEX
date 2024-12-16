@@ -355,9 +355,26 @@ nextButton.addEventListener('click', () => {
 // Initial state
 updateCarousel();
 
+// CONTACT US
 
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
 
+    // Get form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
 
+    // Create a mailto link
+    const mailtoLink = `mailto:suprasanna2006@gmail.com?subject=Message from ${name}&body=Name: ${name}%0A%0A${message}`;
+
+    
+    // Open the mailto link
+    window.location.href = mailtoLink;
+
+    // Optionally, show a success message (but email is not confirmed sent)
+    alert("Your message has been prepared. Please confirm in your email client.");
+});
 
 
 

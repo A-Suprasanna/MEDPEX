@@ -3,131 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3-Image Carousel with Looping</title>
+    <title>Contact Us</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
-        }
-
-        .carousel-container {
-            position: relative;
-            max-width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px 0;
-        }
-
-        .carousel-slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-slide {
-            flex: 0 0 33.333%; /* Each image takes 1/3rd of the container width */
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
         }
 
-        .carousel-slide img {
-            width: 80%;
-            height: auto;
-            opacity: 0.7;
-            transition: transform 0.3s, opacity 0.3s;
+        .contact-form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
         }
 
-        .carousel-slide img.active {
-            transform: scale(1.2); /* Enlarge the middle image */
-            opacity: 1; /* Fully visible */
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
         }
 
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .btn-submit {
+            background-color: #007BFF;
             color: white;
             border: none;
-            padding: 10px;
+            padding: 10px 15px;
+            border-radius: 5px;
             cursor: pointer;
-            border-radius: 50%;
-            font-size: 20px;
+            width: 100%;
         }
 
-        .arrow-left {
-            left: 10px;
+        .btn-submit:hover {
+            background-color: #0056b3;
         }
 
-        .arrow-right {
-            right: 10px;
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            color: green;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
-
-<h1>Our Gallery</h1>
-
-<div class="carousel-container">
-    <div class="carousel-slides">
-        <div class="carousel-slide">
-            <img src="https://via.placeholder.com/150?text=1" alt="Image 1">
-        </div>
-        <div class="carousel-slide">
-            <img src="https://via.placeholder.com/150?text=2" alt="Image 2" class="active">
-        </div>
-        <div class="carousel-slide">
-            <img src="https://via.placeholder.com/150?text=3" alt="Image 3">
-        </div>
-        <div class="carousel-slide">
-            <img src="https://via.placeholder.com/150?text=4" alt="Image 4">
-        </div>
-        <div class="carousel-slide">
-            <img src="https://via.placeholder.com/150?text=5" alt="Image 5">
-        </div>
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
     </div>
-    <!-- Arrows -->
-    <button class="arrow arrow-left">&#10094;</button>
-    <button class="arrow arrow-right">&#10095;</button>
-</div>
 
-<script>
-    const slides = document.querySelector('.carousel-slides');
-    const images = document.querySelectorAll('.carousel-slide img');
-    const prevButton = document.querySelector('.arrow-left');
-    const nextButton = document.querySelector('.arrow-right');
-    const visibleImages = 3;
-    let currentIndex = 1; // Start with the second image in the middle
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
 
-    function updateCarousel() {
-        // Translate the slides container
-        slides.style.transform = `translateX(-${(currentIndex - 1) * 100 / visibleImages}%)`;
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
 
-        // Update the 'active' class to highlight the middle image
-        images.forEach((img, index) => {
-            img.classList.remove('active');
-            if (index === currentIndex) {
-                img.classList.add('active');
-            }
+            // Create a mailto link
+            const mailtoLink = `mailto:suprasanna2006@gmail.com?subject=Message from ${name}&body=Name: ${name}%0A%0A${message}`;
+
+            
+            // Open the mailto link
+            window.location.href = mailtoLink;
+
+            // Optionally, show a success message (but email is not confirmed sent)
+            alert("Your message has been prepared. Please confirm in your email client.");
         });
-    }
-
-    // Event listeners for the arrows
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back to the last image if at the start
-        updateCarousel();
-    });
-
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image if at the end
-        updateCarousel();
-    });
-
-    // Initial state
-    updateCarousel();
-</script>
-
+    </script>
 </body>
 </html>
