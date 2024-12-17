@@ -78,9 +78,7 @@ height: 870px;
 background-color: #2a3d66;
 color: white;
 }
-.catebackground{
-  background-image: linear-gradient(to right, #f3f6fb, #e1e8f0);
-}
+
 .profile{
   position: absolute;
   left: 35px;
@@ -313,8 +311,6 @@ h1 {
 /* //PRODUCTS PAGE */
 
 .container1, .container2, .container3, .container4, .container5 {
- 
-
   text-decoration: none;
   width: 80%;
   margin: 20px auto;
@@ -614,13 +610,20 @@ h1 {
 
 .contact-form {
   background: white;
-  padding: 20px;
+  padding: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
-  margin-left:850px;
-  margin-top: 75px;
+  margin-left:200px;
+  margin-top: 100px;
+  
+}
+.contact-form:hover{
+  scale: 1.03;
+  transition: 0.4s;
 }
 
 .contact-form h2 {
@@ -672,3 +675,69 @@ h1 {
   color: green;
   font-size: 16px;
 }
+
+.contactimg{
+  position: absolute;
+  top: 6050px;
+  left: 900px;
+  border-radius: 40px;
+  height: 300px;
+  width: 400px;
+}
+.contactimg:hover{
+  scale: 1.03;
+  transition: 0.4s;
+}
+
+/* SEARCH BAR */
+/* 
+.search-container {
+  margin: 20px auto;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+#search-input {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+#search-button {
+  width: 20%;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#search-button:hover {
+  background-color: #218838;
+} */
+
+/* Product list styling */
+/* #product-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  width: 50%;
+} */
+
+/* #product-list li {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #e2e6ea;
+  border-radius: 5px;
+  display: none; 
+}
+
+.visible {
+  display: block;
+} */

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar Example</title>
+    <style>
+        /* CSS for styling */
+  /* Search bar styling */
+.search-container {
+    position: relative;
+    width: 300px;
+    margin: 20px auto;
+}
+
+#search-input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.suggestions li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: #f0f0f0;
+}
+
+.product-list {
+    margin-top: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search for products..." autocomplete="off">
+        <ul id="suggestions-list" class="suggestions"></ul>
+        <button onclick="searchProduct()">Search</button>
+    </div>
+    
+    <div id="search-results" class="product-list"></div>
+    
+
+    <script>
+        // Function to search and filter items
+       // Sample product data (replace this with your existing product data)
+const products = [
+{ name: "Paracetamol", image: "https://via.placeholder.com/50", description: "Pain reliever", price: 200, currency: "INR" },
+{ name: "Aspirin", image: "https://via.placeholder.com/50", description: "Fever reducer", price: 290, currency: "INR" },
+{ name: "Azithromycin", image: "https://via.placeholder.com/50", description: "Antibiotic", price: 260, currency: "INR" },
+{ name: "Morphine", image: "https://via.placeholder.com/50", description: "Pain management", price: 400, currency: "INR" },
+{ name: "Stethoscope", image: "https://via.placeholder.com/50", description: "Diagnostic tool", price: 750, currency: "INR" },
+{ name: "Thermometer", image: "https://via.placeholder.com/50", description: "Measures temperature", price: 650, currency: "INR" }
+// Add more products as needed
+];
+
+// Function to display real-time suggestions
+const searchInput = document.getElementById("search-input");
+const suggestionsList = document.getElementById("suggestions-list");
+const searchResults = document.getElementById("search-results");
+
+searchInput.addEventListener("input", function () {
+const query = searchInput.value.toLowerCase();
+suggestionsList.innerHTML = ""; // Clear suggestions
+
+if (query.length > 0) {
+    // Filter products by name starting with the query
+    const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().startsWith(query)
+    );
+
+    // Show suggestions
+    filteredProducts.forEach(product => {
+        const li = document.createElement("li");
+        li.textContent = product.name;
+
+        // Add click event to fill the input field
+        li.addEventListener("click", function () {
+            searchInput.value = product.name;
+            suggestionsList.innerHTML = ""; // Clear suggestions
+        });
+
+        suggestionsList.appendChild(li);
+    });
+}
+});
+
+// Function to search and display product
+function searchProduct() {
+const query = searchInput.value.toLowerCase();
+searchResults.innerHTML = ""; // Clear previous results
+
+const foundProduct = products.find(product =>
+    product.name.toLowerCase() === query
+);
+
+if (foundProduct) {
+    // Display the matched product
+    const productCard = `
+        <div class="product-card">
+            <img src="${foundProduct.image}" alt="${foundProduct.name}" />
+            <h3>${foundProduct.name}</h3>
+            <p>${foundProduct.description}</p>
+            <p>Price: ${foundProduct.price} ${foundProduct.currency}</p>
+        </div>
+    `;
+    searchResults.innerHTML = productCard;
+} else {
+    alert("Product not found. Please try another search!");
+}
+}
+</script>
+</body>
+</html>

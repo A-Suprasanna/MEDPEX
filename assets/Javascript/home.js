@@ -374,13 +374,30 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 
     // Optionally, show a success message (but email is not confirmed sent)
     alert("Your message has been prepared. Please confirm in your email client.");
-});
+}); 
 
 
+// SEARCH BAR
 
+// function searchProduct() {
+//     const input = document.getElementById("search-input").value.toLowerCase();
+//     const products = document.querySelectorAll("#product-list li");
 
+//     let productFound = false;
 
+//     products.forEach(product => {
+//         const productName = product.textContent.toLowerCase();
+//         if (productName === input) {
+//             product.classList.add("visible"); // Show matching product
+//             productFound = true;
+//         } else {
+//             product.classList.remove("visible"); // Hide non-matching products
+//         }
+//     });
 
-
+//     if (!productFound) {
+//         alert("Product not found. Please try another search!");
+//     }
+// }
 
 
