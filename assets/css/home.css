@@ -608,7 +608,7 @@ h1 {
 
 /* CONTACT US */
 
-.contact-form {
+/* .contact-form {
   background: white;
   padding: 50px;
   padding-top: 20px;
@@ -687,18 +687,18 @@ h1 {
 .contactimg:hover{
   scale: 1.03;
   transition: 0.4s;
-}
+} */
 /* Error message styling */
-.error-message {
+/* .error-message {
   color: red;
   font-size: 12px;
   margin-top: 5px;
-}
+} */
 
 /* Highlight input fields with errors */
-.input-error {
+/* .input-error {
   border: 1px solid red;
-}
+} */
 
 /* SEARCH BAR */
 /* 

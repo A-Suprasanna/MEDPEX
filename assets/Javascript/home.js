@@ -357,86 +357,84 @@ updateCarousel();
 
 // CONTACT US
 
-document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+// document.getElementById('contactForm').addEventListener('submit', function (event) {
+//     event.preventDefault();
 
-    // Get form data
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+//     // Get form data
+//     const name = document.getElementById('name').value;
+//     const email = document.getElementById('email').value;
+//     const message = document.getElementById('message').value;
 
-    // Create a mailto link
-    const mailtoLink = `mailto:suprasanna2006@gmail.com?subject=Message from ${name}&body=Name: ${name}%0A%0A${message}`;
+//     // Create a mailto link
+//     const mailtoLink = `mailto:suprasanna2006@gmail.com?subject=Message from ${name}&body=Name: ${name}%0A%0A${message}`;
 
     
-    // Open the mailto link
-    window.location.href = mailtoLink;
+//     // Open the mailto link
+//     window.location.href = mailtoLink;
 
-    // Optionally, show a success message (but email is not confirmed sent)
-    alert("Your message has been prepared. Please confirm in your email client.");
-}); 
-
-
+//     // Optionally, show a success message (but email is not confirmed sent)
+//     alert("Your message has been prepared. Please confirm in your email client.");
+// }); 
 
 
-document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    // Clear any previous error messages
-    clearErrorMessages();
-
-    // Get form data
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    let isValid = true;
-
-    // Validate name (no numbers, min 3 characters, max 32 characters)
-    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)){
-        showError('name', 'Name must be 3-32 characters long and contain only letters.');
-        isValid = false;
-    }
-
-    // Validate email (simple regex for email format)
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        showError('email', 'Please enter a valid email address.');
-        isValid = false;
-    }
-
-    // Validate message (minimum 10 characters)
-    if (message.length < 20) {
-        showError('message', 'Message must be at least 20 characters long.');
-        isValid = false;
-    }
-
-    // If all inputs are valid, process the form
-    if (isValid) {
-        const mailtoLink = `mailto:suprasanna2006@gmail.com?subject=Message from ${name}&body=Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
-        window.location.href = mailtoLink;
-        alert("Your message has been prepared. Please confirm in your email client.");
-    }
-});
-
-// Function to show error messages under the input fields
-function showError(fieldId, message) {
-    const field = document.getElementById(fieldId);
-    let errorElement = document.createElement('div');
-    errorElement.className = 'error-message';
-    errorElement.innerText = message;
-    field.parentElement.appendChild(errorElement);
-    field.classList.add('input-error');
-}
-
-// Function to clear previous error messages
-function clearErrorMessages() {
-    const errorMessages = document.querySelectorAll('.error-message');
-    errorMessages.forEach(msg => msg.remove());
-    const inputs = document.querySelectorAll('.input-error');
-    inputs.forEach(input => input.classList.remove('input-error'));
-}
 
 
+// document.getElementById('contactForm').addEventListener('submit', function (event) {
+//     event.preventDefault();
+
+//     // Clear any previous error messages
+//     clearErrorMessages();
+
+//     // Get form data
+//     const name = document.getElementById('name').value.trim();
+//     const email = document.getElementById('email').value.trim();
+//     const message = document.getElementById('message').value.trim();
+
+//     let isValid = true;
+
+//     // Validate name (no numbers, min 3 characters, max 32 characters)
+//     if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)){
+//         showError('name', 'Name must be 3-32 characters long and contain only letters.');
+//         isValid = false;
+//     }
+
+//     // Validate email (simple regex for email format)
+//     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+//         showError('email', 'Please enter a valid email address.');
+//         isValid = false;
+//     }
+
+//     // Validate message (minimum 10 characters)
+//     if (message.length < 20) {
+//         showError('message', 'Message must be at least 20 characters long.');
+//         isValid = false;
+//     }
+
+//     // If all inputs are valid, process the form
+//     if (isValid) {
+//         const mailtoLink = `mailto:suprasanna2006@gmail.com?subject=Message from ${name}&body=Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
+//         window.location.href = mailtoLink;
+//         alert("Your message has been prepared. Please confirm in your email client.");
+//     }
+// });
+
+// // Function to show error messages under the input fields
+// function showError(fieldId, message) {
+//     const field = document.getElementById(fieldId);
+//     let errorElement = document.createElement('div');
+//     errorElement.className = 'error-message';
+//     errorElement.innerText = message;
+//     field.parentElement.appendChild(errorElement);
+//     field.classList.add('input-error');
+// }
+
+// // Function to clear previous error messages
+// function clearErrorMessages() {
+//     const errorMessages = document.querySelectorAll('.error-message');
+//     errorMessages.forEach(msg => msg.remove());
+//     const inputs = document.querySelectorAll('.input-error');
+//     inputs.forEach(input => input.classList.remove('input-error'));
+// }
 
 
 
@@ -445,62 +443,64 @@ function clearErrorMessages() {
 
 
 
-document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault();
 
-    // Clear any previous error messages
-    clearErrorMessages();
 
-    // Get form data
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+// document.getElementById('contactForm').addEventListener('submit', function (event) {
+//     event.preventDefault();
 
-    let isValid = true;
+//     // Clear any previous error messages
+//     clearErrorMessages();
 
-    // Validate name (no numbers, min 3 characters, max 32 characters)
-    if (!/^[a-zA-Z\s]{3,32}$/.test(name)) {
-        showError('name', 'Name must be 3-32 characters long and contain only letters.');
-        isValid = false;
-    }
+//     // Get form data
+//     const name = document.getElementById('name').value.trim();
+//     const email = document.getElementById('email').value.trim();
+//     const message = document.getElementById('message').value.trim();
 
-    // Validate email (improved regex for email format)
-    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
-        showError('email', 'Please enter a valid email address.');
-        isValid = false;
-    }
+//     let isValid = true;
 
-    // Validate message (minimum 20 characters)
-    if (message.length < 20) {
-        showError('message', 'Message must be at least 20 characters long.');
-        isValid = false;
-    }
+//     // Validate name (no numbers, min 3 characters, max 32 characters)
+//     if (!/^[a-zA-Z\s]{3,32}$/.test(name)) {
+//         showError('name', 'Name must be 3-32 characters long and contain only letters.');
+//         isValid = false;
+//     }
 
-    // If all inputs are valid, process the form
-    if (isValid) {
-        const mailtoLink = `mailto:suprasanna2006@gmail.com?subject=Message from ${name}&body=Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
-        window.location.href = mailtoLink;
-        alert("Your message has been prepared. Please confirm in your email client.");
-    }
-});
+//     // Validate email (improved regex for email format)
+//     if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+//         showError('email', 'Please enter a valid email address.');
+//         isValid = false;
+//     }
 
-// Function to show error messages under the input fields
-function showError(fieldId, message) {
-    const field = document.getElementById(fieldId);
-    let errorElement = document.createElement('div');
-    errorElement.className = 'error-message';
-    errorElement.innerText = message;
-    field.parentElement.appendChild(errorElement);
-    field.classList.add('input-error');
-}
+//     // Validate message (minimum 20 characters)
+//     if (message.length < 20) {
+//         showError('message', 'Message must be at least 20 characters long.');
+//         isValid = false;
+//     }
 
-// Function to clear previous error messages
-function clearErrorMessages() {
-    const errorMessages = document.querySelectorAll('.error-message');
-    errorMessages.forEach(msg => msg.remove());
-    const inputs = document.querySelectorAll('.input-error');
-    inputs.forEach(input => input.classList.remove('input-error'));
-}
+//     // If all inputs are valid, process the form
+//     if (isValid) {
+//         const mailtoLink = `mailto:suprasanna2006@gmail.com?subject=Message from ${name}&body=Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
+//         window.location.href = mailtoLink;
+//         alert("Your message has been prepared. Please confirm in your email client.");
+//     }
+// });
+
+// // Function to show error messages under the input fields
+// function showError(fieldId, message) {
+//     const field = document.getElementById(fieldId);
+//     let errorElement = document.createElement('div');
+//     errorElement.className = 'error-message';
+//     errorElement.innerText = message;
+//     field.parentElement.appendChild(errorElement);
+//     field.classList.add('input-error');
+// }
+
+// // Function to clear previous error messages
+// function clearErrorMessages() {
+//     const errorMessages = document.querySelectorAll('.error-message');
+//     errorMessages.forEach(msg => msg.remove());
+//     const inputs = document.querySelectorAll('.input-error');
+//     inputs.forEach(input => input.classList.remove('input-error'));
+// }
 
 
 // // SEARCH BAR
