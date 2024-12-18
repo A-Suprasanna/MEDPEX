@@ -688,6 +688,17 @@ h1 {
   scale: 1.03;
   transition: 0.4s;
 }
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Highlight input fields with errors */
+.input-error {
+  border: 1px solid red;
+}
 
 /* SEARCH BAR */
 /* 
