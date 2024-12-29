@@ -67,7 +67,7 @@ form.addEventListener("submit", (event) => {
                 const user = userCredential.user;
                 console.log('Login successful:', user);
                 // Redirect to a different page (e.g., dashboard or home)
-                window.location.href = "./home.html"; // Change this to the page you want to redirect to
+                window.location.href = "./new.html"; // Change this to the page you want to redirect to
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -105,23 +105,21 @@ password.addEventListener("input", () => {
 //FOR BUTTON
 
 // After login is successful, store the first letter of the username in localStorage
-signInWithEmailAndPassword(auth, emailValue, passwordValue)
-  .then((userCredential) => {
-    const user = userCredential.user;
-    const username = user.email.split('@')[0];  // Use email username part as fallback
-    const firstLetter = username.charAt(0).toUpperCase();
+// signInWithEmailAndPassword(auth, emailValue, passwordValue)
+//   .then((userCredential) => {
+//     const user = userCredential.user;
+//     const username = user.email.split('@')[0];  // Use email username part as fallback
+//     const firstLetter = username.charAt(0).toUpperCase();
     
-    // Store the first letter in localStorage
-    localStorage.setItem('usernameFirstLetter', firstLetter);
+//     // Store the first letter in localStorage
+//     localStorage.setItem('usernameFirstLetter', firstLetter);
 
-    // Redirect to home page
-    window.location.href = "./home.html";
-  })
-  .catch((error) => {
-    // Handle error as before
-  });
-
-
+//     // Redirect to home page
+//     window.location.href = "./new.html";
+//   })
+//   .catch((error) => {
+//     // Handle error as before
+//   });
 
 
 
@@ -129,23 +127,25 @@ signInWithEmailAndPassword(auth, emailValue, passwordValue)
 
 
 
-// This function runs after the user logs in or registers
-function loginUser() {
-    const userName = document.getElementById("username").value; // Get the username
-    const userInitial = userName.charAt(0).toUpperCase(); // Get the first letter of the username
 
-    // Store the username and initial in localStorage
-    localStorage.setItem("userName", userName);
-    localStorage.setItem("userInitial", userInitial);
 
-    // After login/registration, redirect to the home page
-    window.location.href = "index.html"; // Redirect back to the home page
-}
+// // This function runs after the user logs in or registers
+// function loginUser() {
+//     const userName = document.getElementById("username").value; // Get the username
+//     const userInitial = userName.charAt(0).toUpperCase(); // Get the first letter of the username
 
-// Event listener for the login form submission
-document.getElementById("login-form").addEventListener("submit", function(e) {
-    e.preventDefault(); // Prevent form submission
-    loginUser();
-});
+//     // Store the username and initial in localStorage
+//     localStorage.setItem("userName", userName);
+//     localStorage.setItem("userInitial", userInitial);
+
+//     // After login/registration, redirect to the home page
+//     window.location.href = "index.html"; // Redirect back to the home page
+// }
+
+// // Event listener for the login form submission
+// document.getElementById("login-form").addEventListener("submit", function(e) {
+//     e.preventDefault(); // Prevent form submission
+//     loginUser();
+// });
 
   

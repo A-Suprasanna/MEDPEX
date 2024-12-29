@@ -1,0 +1,44 @@
+[
+{
+    "image": "https://m.media-amazon.com/images/I/41i+zWBppZL._AC_UF1000,1000_QL80_.jpg",
+    "name": "Stethoscope ",
+    "description": " A device used by doctors to listen to internal sounds of the body, such as heartbeats and lung sounds.",
+    "price": 750,
+    "currency": "INR"
+  },
+  {
+    "image": "https://5.imimg.com/data5/SELLER/Default/2023/8/335862709/UC/YU/KS/141647456/firstmed-professional-aneroid-sphygmomanometer-with-stethoscope-black-bp-monitor-black-500x500.png",
+    "name": "Sphygmomanometer ",
+    "description": "A device used to measure blood pressure. It consists of an inflatable cuff and a gauge to measure the pressure in the arteries.",
+    "price": 640,
+    "currency": "INR"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/610lBxabhTL.jpg",
+    "name": "Thermometer",
+    "description": "A device used to measure body temperature. It can be digital or mercury-based and is commonly used to check for fever.",
+    "price": 650,
+    "currency": "INR"
+  },
+  {
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsDp-V7E2ha_-fzAxQEKE6FnSSGaBUAMoAQ&s",
+    "name": "Otoscope",
+    "description": "A handheld device used by doctors to examine the ears, specifically the ear canal and eardrum.",
+    "price": 380,
+    "currency": "INR"
+  },
+  {
+    "image": "https://nationalindco.com/wp-content/uploads/2023/05/ophthalmoscope_beta_200s_with_rechargeable_battery_handle201853153342179_b-450x450.jpg",
+    "name": "Ophthalmoscope",
+    "description": "An instrument used by doctors to inspect the inside of the eye, including the retina, optic disc, and blood vessels.",
+    "price": 285,
+    "currency": "INR"
+  },
+  {
+    "image": "https://nationalindco.com/wp-content/uploads/2023/05/ophthalmoscope_beta_200s_with_rechargeable_battery_handle201853153342179_b-450x450.jpg",
+    "name": "Ophthalmoscope",
+    "description": "An instrument used by doctors to inspect the inside of the eye, including the retina, optic disc, and blood vessels.",
+    "price": 285,
+    "currency": "INR"
+  }
+]

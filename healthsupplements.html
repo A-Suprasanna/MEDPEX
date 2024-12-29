@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/healthsupplements.css">
+</head>
+<body>
+
+    <!-- <div id="Home">
+        <header class="headers">
+            <h1>Medpex</h1>
+            <div id="user-icon-container">
+                <img src="./assets/images/profileimg.png" id="user-icon" class="icon" alt="User Icon">
+                <img src="./assets/images/addtocart.png" class="addtocart">
+                <img src="./assets/images/Medpex (2) (1).png" class="medpex">
+                <div id="dropdown-menu" class="menubutton">
+                    <p id="welcome-text">Welcome!</p>
+                    <a href="./index.html">
+                        <button id="auth-button">Login/Register</button>
+                    </a>
+                    <button id="logout-button" style="display: none;">Logout</button>
+                </div>
+                <nav class="navigation">
+                    <a href="#Home" class="nav">Home</a>
+                    <a href="#Categories" class="nav">Categories</a>
+                    <a href="#Purchases" class="nav">Products</a>
+                    <a href="#Featured" class="nav">Purchases</a>
+                    <a href="#About Us" class="nav">About Us</a>
+                    <a href="#Contact Us " class="nav">Contact Us</a>
+                </nav>
+            </div>
+        </header>
+    </div> -->
+
+
+    
+    <h2 class="medicaldrugs">Top Categories</h2>
+    <section id="healthsupplements" class="meddrugs">
+        <!-- Categories will be dynamically injected here -->
+    </section>
+
+    <div id="prescription-modal" class="modal">
+        <div class="modal-content">
+            <h3>Upload Prescription</h3>
+            <input type="file" id="prescription-file" accept="image/*, .pdf" />
+            <button id="upload-btn">Upload Prescription</button>
+            <button id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Payment Page -->
+    <div id="payment-page" class="payment-page" style="display: none;">
+        <h3>Payment Page</h3>
+        <form id="payment-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" required /><br>
+
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" required /><br>
+
+            <label for="payment-method">Payment Method:</label><br>
+            <select id="payment-method" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="debit-card">Debit Card</option>
+                <option value="paypal">PayPal</option>
+            </select><br>
+
+            <button type="submit">Proceed to Payment</button>
+        </form>
+    </div>
+    <script src="./assets/Javascript/healthsupplements.js"></script>
+</body>
+</html>

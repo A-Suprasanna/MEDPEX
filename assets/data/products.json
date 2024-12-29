@@ -1,0 +1,18 @@
+[
+    {
+        "id": "product1",
+        "categoryId": "Medicines",
+        "name": "Pain Reliever",
+        "description": "Relieves pain and reduces inflammation.",
+        "price": 10.99,
+        "image": "./assets/images/diabetes_care.jpg"
+    },
+    {
+        "id": "product2",
+        "categoryId": "surgicalsupp",
+        "name": "Scalpel",
+        "description": "High-quality surgical scalpel for precision cutting.",
+        "price": 5.99,
+        "image": "./assets/images/diabetes_care.jpg"
+    }
+]

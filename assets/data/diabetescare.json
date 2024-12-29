@@ -1,0 +1,56 @@
+[
+{
+    "id": "product1",
+    "categoryId": "Medicines",
+    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S1530891X20428198-gr1.jpg",
+    "name": "Insulin Pen",
+    "description": "A pre-filled, disposable device used for administering insulin to manage blood sugar levels in diabetes.",
+    "price": 750,
+    "currency": "INR"
+  },
+  {
+    "id": "product1",
+    "categoryId": "Medicines",
+    "image": "https://images-cdn.ubuy.co.in/65e0c9201858a173fb205331-metene-twist-top-lancets-for-lancing.jpg",
+    "name": "Lancets",
+    "description": "Small, sharp needles used with a lancing device to obtain blood samples for glucose testing.",
+    "price": 640,
+    "currency": "INR"
+  },
+  {
+    "id": "product1",
+    "categoryId": "Medicines",
+    "image": "https://m.media-amazon.com/images/I/61KOWaNOzrL.jpg",
+    "name": "Diabetic Test Strips",
+    "description": "Disposable strips used in conjunction with blood glucose meters to measure blood sugar levels.",
+    "price": 650,
+    "currency": "INR"
+  },
+  {
+    "id": "product1",
+    "categoryId": "Medicines",
+    "image": "https://m.media-amazon.com/images/I/71bBqvfDf0L.jpg",
+    "name": "Diabetic Skin Creams",
+    "description": "Moisturizing lotions designed to prevent dry, cracked skin, which is a common issue for diabetics.",
+    "price": 380,
+    "currency": "INR"
+  },
+  {
+    "id": "product1",
+    "categoryId": "Medicines",
+    "image": "https://rukminim2.flixcart.com/image/850/1000/ky90scw0/resistance-tube/6/j/m/pack-of-3-fabric-resistance-loop-exercise-bands-for-hips-thighs-original-imagagv9ghecdhm6.jpeg?q=20&crop=false",
+    "name": "Exercise Bands ",
+    "description": "Resistance bands used in workouts to help diabetics improve circulation, strength, and overall fitness.",
+    "price": 285,
+    "currency": "INR"
+  },
+  {
+    "id": "product1",
+    "categoryId": "Medicines",
+    "image": "https://m.media-amazon.com/images/I/71bBqvfDf0L.jpg",
+    "name": "Diabetic Skin Creams",
+    "description": "Moisturizing lotions designed to prevent dry, cracked skin, which is a common issue for diabetics.",
+    "price": 380,
+    "currency": "INR"
+  }
+]

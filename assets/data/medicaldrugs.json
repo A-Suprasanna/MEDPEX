@@ -1,0 +1,37 @@
+[
+    {
+        "image": "https://tiimg.tistatic.com/fp/1/007/784/paracetamol-500mg-tablets--229.jpg",
+        "name": "Paracetamol",
+        "description": "Paracetamol (also known as Acetaminophen) is a commonly used over-the-counter medication for relieving mild to moderate pain and reducing fever.",
+        "price": 200,
+        "currency": "INR"
+    },
+    {
+        "image": "https://www.albionbd.com/wp-content/uploads/2021/08/Aspirin-300mg-Soluble-Tablet.jpg",
+        "name": "Aspirin",
+        "description": "Aspirin is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce pain, inflammation, and fever, and to prevent blood clots.",
+        "price": 290,
+        "currency": "INR"
+    },
+    {
+        "image": "https://5.imimg.com/data5/SELLER/Default/2024/1/377899921/DI/ER/FI/101293874/azithromycin-500-mg-tablets-500x500.jpg",
+        "name": "Azithromycin",
+        "description": "Azithromycin is an antibiotic used to treat various bacterial infections, including respiratory, skin, and ear infections.",
+        "price": 260,
+        "currency": "INR"
+    },
+    {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSmVZb-jtVwBvrCazI9rv2Coet6__dJT3Zhw&s",
+        "name": "Morphine",
+        "description": "Morphine is a powerful opioid pain medication used to manage severe pain, particularly after surgery or injury.",
+        "price": 400,
+        "currency": "INR"
+    },
+    {
+        "image": "https://ecommerce.genericartmedicine.com/upload/products/product-photo-745.jpeg",
+        "name": "Ciprofloxacin",
+        "description": "Ciprofloxacin is an antibiotic used to treat a variety of bacterial infections, including urinary tract, respiratory, and skin infections.",
+        "price": 1500,
+        "currency": "INR"
+    }
+]

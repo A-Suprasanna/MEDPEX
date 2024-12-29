@@ -1,0 +1,32 @@
+[
+  {
+      "image": "./assets/images/Medicines_and_drugs.png",
+      "label": "Medicines and Drugs",
+      "link": "./Medicalanddrugs.html",
+      "products": "./assets/data/medicaldrugs.json"
+  },
+  {
+      "image": "./assets/images/medical_equipment.jpg",
+      "label": "Medical Equipment",
+      "link": "./medicalequipment.html",
+      "products": "./assets/data/medicalequipment.json"
+  },
+  {
+      "image": "./assets/images/health_supplements.webp",
+      "label": "Health Supplements",
+      "link": "./healthsupplements.html",
+      "products": "./assets/data/healthsupplements.json"
+  },
+  {
+      "image": "./assets/images/Surgical_supplies.avif",
+      "label": "Surgical Supplies",
+      "link": "./surgicalsupplies.html",
+      "products": "./assets/data/surgicalsupplies.json"
+  },
+  {
+      "image": "./assets/images/diabetes_care.jpg",
+      "label": "Diabetes Care",
+      "link": "./diabetescare.html",
+      "products": "./assets/data/medicalequipment.json"
+  }
+]

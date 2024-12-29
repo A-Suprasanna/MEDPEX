@@ -1,0 +1,56 @@
+[
+    {
+        "id": "product1",
+        "categoryId": "Medicines",
+        "image": "https://rukminim2.flixcart.com/image/850/1000/ky0g58w0/surgical-scalpel/k/o/8/10-sterile-11-surgical-blades-with-free-3-scalpel-knife-handle-original-imagabyqrxf7gtma.jpeg?q=90&crop=false",
+        "name": "Surgical Scalpels",
+        "description": "Precision cutting instruments used for making incisions in tissue during surgery.",
+        "price": 640,
+        "currency": "INR"
+      },
+      {
+        "id": "product1",
+        "categoryId": "Medicines",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2qFH7ucymPFnibHhvnHuPTLCReux4EdaRbA&s",
+        "name": "Hemostats",
+        "description": "Clamps used to control bleeding by constricting blood vessels or tissues during surgery.",
+        "price": 650,
+        "currency": "INR"
+      },
+      {
+        "id": "product1",
+        "categoryId": "Medicines",
+        "image": "https://images-cdn.ubuy.co.in/634e4d1b611ffe61c8134a73-nitrile-gloves-1000-ml-disposable-latex.jpg",
+        "name": "Surgical Gloves",
+        "description": "Sterile gloves worn by medical staff during procedures to maintain sterility.",
+        "price": 380,
+        "currency": "INR"
+      },
+      {
+        "id": "product1",
+        "categoryId": "Medicines",
+        "image": "https://rukminim2.flixcart.com/image/850/1000/ksnjp8w0/mask-respirator/a/l/y/free-size-100-surgical-mask-pack-of-100-pieces-disposable-masks-original-imag65k8q6hddzcc.jpeg?q=90&crop=false",
+        "name": "Surgical Masks",
+        "description": "Worn by surgeons and surgical staff to prevent contamination and protect both the patient and healthcare workers.",
+        "price": 285,
+        "currency": "INR"
+      },
+      {
+        "id": "product1",
+        "categoryId": "Medicines",
+        "image": "https://ars.els-cdn.com/content/image/1-s2.0-S1530891X20428198-gr1.jpg",
+        "name": "Insulin Pen",
+        "description": "A pre-filled, disposable device used for administering insulin to manage blood sugar levels in diabetes.",
+        "price": 750,
+        "currency": "INR"
+      },
+      {
+        "id": "product1",
+        "categoryId": "Medicines",
+        "image": "https://m.media-amazon.com/images/I/61KOWaNOzrL.jpg",
+        "name": "Diabetic Test Strips",
+        "description": "Disposable strips used in conjunction with blood glucose meters to measure blood sugar levels.",
+        "price": 650,
+        "currency": "INR"
+      }
+]

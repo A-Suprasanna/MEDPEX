@@ -1,0 +1,58 @@
+/* Styles for Categories Display */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.category-card {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.2s ease;
+}
+
+.category-card img {
+    width: 100%;
+    height:80%;
+    border-radius: 10px;
+}
+
+.category-card p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover .category-card {
+    transform: scale(1.05);
+}
+
+a:active .category-card {
+    transform: scale(1);
+}

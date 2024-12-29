@@ -31,7 +31,9 @@ const confirmPasswordError = document.getElementById("confirmPasswordError");
 
 // Validation patterns
 const nameRegex = /^[a-zA-Z\s]{3,50}$/; // Only letters and spaces, 3-50 characters
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Valid email format
+// const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Valid email format
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/; // Rejects domains with numbers
+const allowedDomains = ["gmail.com", "yahoo.com", "outlook.com"];
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,32}$/; // Password rules
 
 // Clear errors on input
@@ -67,7 +69,7 @@ form.addEventListener("submit", (event) => {
     emailError.textContent = "Email is required!";
     valid = false;
   } else if (!emailRegex.test(emailInput.value)) {
-    emailError.textContent = "Enter a valid email";
+    emailError.textContent = "Enter a valid email address.";
     valid = false;
   }
 
@@ -97,7 +99,7 @@ form.addEventListener("submit", (event) => {
     .then((userCredential) => {
       // Registration successful
       alert("Registration successful!");
-      window.location.href = "./home.html"; // Redirect to home page
+      window.location.href = "./new.html"; // Redirect to new page
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -106,6 +108,8 @@ form.addEventListener("submit", (event) => {
       // Display Firebase error messages
       if (errorCode === "auth/email-already-in-use") {
         emailError.textContent = "This email is already registered!";
+      } else if (errorCode === "auth/invalid-email") {
+        emailError.textContent = "Invalid email address!";
       } else {
         emailError.textContent = errorMessage;
       }
@@ -115,29 +119,30 @@ form.addEventListener("submit", (event) => {
 
 
 
+
 //FOR BUTTON
 
-createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
-  .then((userCredential) => {
-    const user = userCredential.user;
-    const username = nameInput.value;  // Assuming the user is providing their name
-    const firstLetter = username.charAt(0).toUpperCase();
+// createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
+//   .then((userCredential) => {
+//     const user = userCredential.user;
+//     const username = nameInput.value;  // Assuming the user is providing their name
+//     const firstLetter = username.charAt(0).toUpperCase();
 
-    // Store the first letter in localStorage
-    localStorage.setItem('usernameFirstLetter', firstLetter);
+//     // Store the first letter in localStorage
+//     localStorage.setItem('usernameFirstLetter', firstLetter);
 
-    // Redirect to home page
-    window.location.href = "./home.html";
-  })
-  .catch((error) => {
-    // Handle registration error as before
-  });
-
-
+//     // Redirect to home page
+//     window.location.href = "./home.html";
+//   })
+//   .catch((error) => {
+//     // Handle registration error as before
+//   });
 
 
 
 
+  
+  
 
 
   
