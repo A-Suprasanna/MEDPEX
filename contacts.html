@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medpex Contact Page</title>
+    <style>
+        /* CONTACT US */
+        body {
+            background-image: linear-gradient(to right, #f3f6fb, #e1e8f0);
+        }
+        .contacts {
+            margin-top: 110px;
+            margin-left: 10px;
+        }
+        .contact {
+            margin-left: 670px;
+            margin-top: 150px;
+            font-size: 32px;
+        }
+        .contact-form {
+            background: white;
+            padding: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin-left: 200px;
+            margin-top: 55px;
+        }
+        .contact-form:hover {
+            scale: 1.03;
+            transition: 0.4s;
+        }
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            resize: none;
+            height: 100px;
+        }
+        .btn-submit {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            color: green;
+            font-size: 16px;
+        }
+        .contactimg {
+            position: absolute;
+            top: 317px;
+            left: 900px;
+            border-radius: 40px;
+            height: 300px;
+            width: 400px;
+        }
+        .contactimg:hover {
+            scale: 1.03;
+            transition: 0.4s;
+        }
+        /* Error message styling */
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        /* Highlight input fields with errors */
+        .input-error {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<section class="contacts">
+    <div class="contactus" id="Contact Us"></div>
+    <h1 class="contact">Contact Us</h1>
+    <p class="line">-</p>
+    <div class="contact-form">
+        <form id="contactForm" novalidate>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <a href="mailto:suprasanna2006@gmail.com">
+                <button type="submit" class="btn-submit">Send Message</button>
+            </a>
+            <!-- <button type="submit" class="btn-submit">Send Message</button> -->
+        </form>
+    </div>
+    <img src="./assets/images/contactimg.webp" class="contactimg">
+</section>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+    
+        // Clear any previous error messages
+        clearErrorMessages();
+    
+        // Get form data
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+    
+        let isValid = true;
+    
+        // Validate name (no numbers, min 3 characters, max 32 characters)
+        if (!/^[a-zA-Z\s]{3,32}$/.test(name)) {
+            showError('name', 'Name must be 3-32 characters long and contain only letters and spaces.');
+            isValid = false;
+        }
+    
+        // Validate email (simple regex for email format)
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            showError('email', 'Please enter a valid email address.');
+            isValid = false;
+        }
+    
+        // Validate message (minimum 20 characters)
+        if (message.length < 20) {
+            showError('message', 'Message must be at least 20 characters long.');
+            isValid = false;
+        }
+    
+        // If all inputs are valid, process the form
+        if (isValid) {
+            const mailtoLink = `mailto:suprasanna2006@gmail.com?subject=Message from ${name}&body=Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
+            window.location.href = mailtoLink;
+    
+            // Alert user and redirect to home page after 3 seconds
+            alert("Your message has been prepared. Please confirm in your email client.");
+            setTimeout(() => {
+                window.location.href = './home.html'; // Replace './home.html' with the actual path to your homepage
+            }, 3000); // Redirect after 3 seconds
+        }
+    });
+    
+    // Function to show error messages under the input fields
+    function showError(fieldId, message) {
+        const field = document.getElementById(fieldId);
+        let errorElement = document.createElement('div');
+        errorElement.className = 'error-message';
+        errorElement.innerText = message;
+        field.parentElement.appendChild(errorElement);
+        field.classList.add('input-error');
+    }
+    
+    // Function to clear previous error messages
+    function clearErrorMessages() {
+        const errorMessages = document.querySelectorAll('.error-message');
+        errorMessages.forEach(msg => msg.remove());
+        const inputs = document.querySelectorAll('.input-error');
+        inputs.forEach(input => input.classList.remove('input-error'));
+    }
+    
+</script>
+</body>
+</html>
