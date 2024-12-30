@@ -210,6 +210,7 @@ paymentForm.addEventListener("submit", (e) => {
     Address: ${userAddress}
     Payment Method: ${paymentMethod}`);
     paymentPage.style.display = "none";
+    window.location.href = "./new.html";
 });
 
 
