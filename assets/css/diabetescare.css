@@ -131,7 +131,9 @@ h1 {
     gap: 20px;
     padding: 20px;
 }
-
+.medicaldrugs{
+    margin-left: 630px;
+}
 /* Individual product card styles */
 .product-card {
     background-color: white;
@@ -139,7 +141,7 @@ h1 {
     border-radius: 8px;
     padding: 20px;
     width: 400px;
-    height: 400px; /* Three items per row */
+    height:600px; /* Three items per row */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -169,7 +171,9 @@ h1 {
     font-weight: bold;
     color: #333;
 }
-
+.product-price{
+    margin-left: 145px;
+}
 .product-card .currency {
     font-size: 0.9rem;
     color: #777;
@@ -207,6 +211,18 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+.add-to-cart-btn{
+/* position: absolute;
+top: 650px; */
+margin-left: 200px;
+margin-top:-42px;
+width: 130px;
+}
+.buy-now-btn{
+    width: 130px;
+    margin-top: -10px;
+    margin-left: 30px;
 }
 
 /* Modal Styles */

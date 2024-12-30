@@ -86,13 +86,6 @@
 
 
 
-
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const productsContainer = document.getElementById("Medicalanddrugs");
     const prescriptionModal = document.getElementById("prescription-modal");
@@ -126,49 +119,40 @@ document.addEventListener("DOMContentLoaded", () => {
                 productsContainer.innerHTML += productCard;
             });
 
-            // Add event listeners to buttons
+            // Add event listeners to "Buy Now" buttons
             const buyNowBtns = document.querySelectorAll(".buy-now-btn");
             buyNowBtns.forEach(btn => {
                 btn.addEventListener("click", (e) => {
                     const productName = e.target.getAttribute("data-product");
-                    // Show the prescription upload modal for "Buy Now"
+                    // Show the prescription upload modal
                     prescriptionModal.style.display = "flex";
-                    localStorage.setItem("currentProduct", productName); // Store the product name for later
+                    localStorage.setItem("currentProduct", productName); // Store the product name for later use
                 });
             });
-
-            // Cancel button to hide the modal
-            cancelBtn.addEventListener("click", () => {
-                prescriptionModal.style.display = "none";
-            });
-
-            // Handle upload prescription button click
-            uploadBtn.addEventListener("click", () => {
-                const prescriptionFile = document.getElementById("prescription-file").files[0];
-
-                if (!prescriptionFile) {
-                    alert("Please upload a prescription before proceeding.");
-                    return;
-                }
-
-                // Proceed to payment page after prescription is uploaded
-                prescriptionModal.style.display = "none";
-                paymentPage.style.display = "block";
-            });
-
-            // Handle the payment form submission
-            paymentForm.addEventListener("submit", (e) => {
-                e.preventDefault();
-                const userName = document.getElementById("name").value;
-                const userAddress = document.getElementById("address").value;
-                const paymentMethod = document.getElementById("payment-method").value;
-
-                // Show a confirmation message (or process payment here)
-                alert(`Payment successful for ${localStorage.getItem("currentProduct")}!\nUser: ${userName}\nAddress: ${userAddress}\nPayment Method: ${paymentMethod}`);
-            });
-        })
-        .catch((error) => {
-            console.error("Error loading products:", error);
         });
+
+    // Cancel button to hide the modal
+    cancelBtn.addEventListener("click", () => {
+        prescriptionModal.style.display = "none";
+    });
+
+    // Handle "Upload Prescription" button click
+    uploadBtn.addEventListener("click", () => {
+        const prescriptionFile = document.getElementById("prescription-file").files[0];
+
+        if (!prescriptionFile) {
+            alert("Please upload a prescription before proceeding.");
+            return;
+        }
+
+        // Show success message and proceed to payment page
+        alert("Prescription uploaded successfully!");
+        prescriptionModal.style.display = "none";
+        // Optionally set up a delay for smooth navigation
+        setTimeout(() => {
+            window.location.href = "./payment.html"; // Redirect to payment page (adjust the path as needed)
+        }, 500); // Delay of 500ms
+    });
 });
+
 

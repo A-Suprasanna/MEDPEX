@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     localStorage.setItem("currentProduct", productName); // Store the product name for later
                 });
             });
-
+        });
             // Cancel button to hide the modal
             cancelBtn.addEventListener("click", () => {
                 prescriptionModal.style.display = "none";
@@ -58,22 +58,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 // Proceed to payment page after prescription is uploaded
-                prescriptionModal.style.display = "none";
-                paymentPage.style.display = "block";
-            });
-
-            // Handle the payment form submission
-            paymentForm.addEventListener("submit", (e) => {
-                e.preventDefault();
-                const userName = document.getElementById("name").value;
-                const userAddress = document.getElementById("address").value;
-                const paymentMethod = document.getElementById("payment-method").value;
-
-                // Show a confirmation message (or process payment here)
-                alert(`Payment successful for ${localStorage.getItem("currentProduct")}!\nUser: ${userName}\nAddress: ${userAddress}\nPayment Method: ${paymentMethod}`);
-            });
-        })
-        .catch((error) => {
-            console.error("Error loading products:", error);
-        });
+              // Show success message and proceed to payment page
+        alert("Prescription uploaded successfully!");
+        prescriptionModal.style.display = "none";
+        // Optionally set up a delay for smooth navigation
+        setTimeout(() => {
+            window.location.href = "./payment.html"; // Redirect to payment page (adjust the path as needed)
+        }, 500); // Delay of 500ms
+    });
 });
+
+
+

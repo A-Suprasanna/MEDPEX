@@ -33,5 +33,12 @@
         "description": "Ciprofloxacin is an antibiotic used to treat a variety of bacterial infections, including urinary tract, respiratory, and skin infections.",
         "price": 1500,
         "currency": "INR"
+    },
+    {
+        "image": "https://ecommerce.genericartmedicine.com/upload/products/product-photo-745.jpeg",
+        "name": "Ciprofloxacin",
+        "description": "Ciprofloxacin is an antibiotic used to treat a variety of bacterial infections, including urinary tract, respiratory, and skin infections.",
+        "price": 1500,
+        "currency": "INR"
     }
 ]
