@@ -199,18 +199,18 @@ uploadBtn.addEventListener("click", () => {
 });
 
 // Payment Form Submission
-paymentForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const userName = document.getElementById("name").value;
-    const userAddress = document.getElementById("address").value;
-    const paymentMethod = document.getElementById("payment-method").value;
+// paymentForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     const userName = document.getElementById("name").value;
+//     const userAddress = document.getElementById("address").value;
+//     const paymentMethod = document.getElementById("payment-method").value;
 
-    alert(`Payment successful for ${localStorage.getItem("currentProduct")}!
-    Name: ${userName}
-    Address: ${userAddress}
-    Payment Method: ${paymentMethod}`);
-    paymentPage.style.display = "none";
-    window.location.href = "./new.html";
-});
+//     alert(`Payment successful for ${localStorage.getItem("currentProduct")}!
+//     Name: ${userName}
+//     Address: ${userAddress}
+//     Payment Method: ${paymentMethod}`);
+//     paymentPage.style.display = "none";
+//     window.location.href = "./new.html";
+// });
 
 

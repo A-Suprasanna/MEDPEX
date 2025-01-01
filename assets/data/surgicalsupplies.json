@@ -38,18 +38,18 @@
       {
         "id": "product1",
         "categoryId": "Medicines",
-        "image": "https://ars.els-cdn.com/content/image/1-s2.0-S1530891X20428198-gr1.jpg",
-        "name": "Insulin Pen",
-        "description": "A pre-filled, disposable device used for administering insulin to manage blood sugar levels in diabetes.",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2023/5/309486489/ZX/WV/WH/64441296/whatsapp-image-2023-05-20-at-12-07-07-pm.jpeg",
+        "name": "Surgical Sponges",
+        "description": "Surgical sponges are sterile absorbent materials used during surgeries to absorb blood and fluids, maintain a clean surgical field, and control bleeding.",
         "price": 750,
         "currency": "INR"
       },
       {
         "id": "product1",
         "categoryId": "Medicines",
-        "image": "https://m.media-amazon.com/images/I/61KOWaNOzrL.jpg",
-        "name": "Diabetic Test Strips",
-        "description": "Disposable strips used in conjunction with blood glucose meters to measure blood sugar levels.",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2020/12/VW/AL/XA/1181137/disposable-surgical-blades.jpg",
+        "name": "Surgical blades",
+        "description": "Surgical blades are precision-cutting tools used in medical procedures for making incisions in tissue with high accuracy.",
         "price": 650,
         "currency": "INR"
       }

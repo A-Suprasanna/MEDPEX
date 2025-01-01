@@ -21,23 +21,23 @@
         "currency": "INR"
     },
     {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSmVZb-jtVwBvrCazI9rv2Coet6__dJT3Zhw&s",
-        "name": "Morphine",
-        "description": "Morphine is a powerful opioid pain medication used to manage severe pain, particularly after surgery or injury.",
+        "image": "https://www.shutterstock.com/image-photo/kyiv-ukrainemay-22-2019-cetirizine-600nw-1404629393.jpg",
+        "name": "Cetirizine",
+        "description": "Cetirizine is a non-drowsy antihistamine that relieves allergy symptoms like sneezing, itchy eyes, and hives.",
         "price": 400,
         "currency": "INR"
     },
     {
-        "image": "https://ecommerce.genericartmedicine.com/upload/products/product-photo-745.jpeg",
-        "name": "Ciprofloxacin",
-        "description": "Ciprofloxacin is an antibiotic used to treat a variety of bacterial infections, including urinary tract, respiratory, and skin infections.",
+        "image": "https://www.cofsils.com/uploadfile/product/medicated_cough.jpg",
+        "name": "Cofsils Cough Syrup",
+        "description": "Cofsils Cough Syrup soothes throat irritation and provides quick relief from cough and cold symptoms.",
         "price": 1500,
         "currency": "INR"
     },
     {
-        "image": "https://ecommerce.genericartmedicine.com/upload/products/product-photo-745.jpeg",
-        "name": "Ciprofloxacin",
-        "description": "Ciprofloxacin is an antibiotic used to treat a variety of bacterial infections, including urinary tract, respiratory, and skin infections.",
+        "image": "https://m.media-amazon.com/images/I/91XBcyteWBL.jpg",
+        "name": "Calpol",
+        "description": "Calpol relieves fever and mild to moderate pain, making it suitable for both children and adults.",
         "price": 1500,
         "currency": "INR"
     }

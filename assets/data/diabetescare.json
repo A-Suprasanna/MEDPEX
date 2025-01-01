@@ -38,18 +38,18 @@
   {
     "id": "product1",
     "categoryId": "Medicines",
-    "image": "https://rukminim2.flixcart.com/image/850/1000/ky90scw0/resistance-tube/6/j/m/pack-of-3-fabric-resistance-loop-exercise-bands-for-hips-thighs-original-imagagv9ghecdhm6.jpeg?q=20&crop=false",
-    "name": "Exercise Bands ",
-    "description": "Resistance bands used in workouts to help diabetics improve circulation, strength, and overall fitness.",
+    "image": "https://images-cdn.ubuy.co.in/667f5b88e8c6cb5624333f60-diabetes-testing-kit-blood-glucose.jpg",
+    "name": "Diabetic Testing Kits  ",
+    "description": "Diabetic testing kits are comprehensive tools that allow individuals to monitor their blood glucose levels at home for effective diabetes management.",
     "price": 285,
     "currency": "INR"
   },
   {
     "id": "product1",
     "categoryId": "Medicines",
-    "image": "https://m.media-amazon.com/images/I/71bBqvfDf0L.jpg",
-    "name": "Diabetic Skin Creams",
-    "description": "Moisturizing lotions designed to prevent dry, cracked skin, which is a common issue for diabetics.",
+    "image": "https://healthymaster.in/cdn/shop/articles/51812227949_431ab8ee1c_b.jpg?v=1667659159",
+    "name": "Diabetes-Friendly Snacks",
+    "description": "Diabetes-friendly snacks are low-sugar, high-fiber foods designed to help maintain stable blood sugar levels while satisfying hunger.",
     "price": 380,
     "currency": "INR"
   }

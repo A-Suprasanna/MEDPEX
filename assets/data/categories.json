@@ -1,7 +1,7 @@
 [
   {
       "image": "./assets/images/Medicines_and_drugs.png",
-      "label": "Medicines and Drugs",
+      "label": "Medicines and syrups",
       "link": "./Medicalanddrugs.html",
       "products": "./assets/data/medicaldrugs.json"
   },

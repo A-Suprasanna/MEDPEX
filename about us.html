@@ -16,7 +16,7 @@
        font-size: 35px;
     }
     .aboutuspage{
-        margin-top: 95px;
+        margin-top: 40px;
         margin-left: 75px;
     }
     .aboutuspage:hover{
@@ -42,9 +42,88 @@
         scale:1.025;
         transition: 0.4s;
       }
+
+      /* ADD TO CART */
+
+.addtocart {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 125px;
+    cursor: pointer;
+}
+.homeimg{
+    position: absolute;
+    left: 60px;
+}
+#cart-count {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+#cart-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+#cart-modal ul {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-modal li {
+    margin-bottom: 10px;
+}
+
+#cart-modal button {
+    display: block;
+    margin: 20px auto 0;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 </style>
 <body>
     <section>
+
+        <a href="./new.html">
+            <img src="./assets/images/homeimg.png" class="homeimg" height="50" width="50">
+        </a>
+    
+        <img src="./assets/images/addtocart.png" class="addtocart" id="cart-icon">
+    <span id="cart-count">0</span> <!-- Counter for cart items -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <h3>Your Cart</h3>
+            <ul id="cart-items"></ul> <!-- List to display cart items -->
+            <button id="close-cart-btn">Close</button>
+        </div>
+    </div>
+
+
+
         <div class="aboutmedpex" id="About Us"></div>
         <h1 class="headingaboutus">ABOUT US</h1>
         <img src="./assets/images/aboutmedpex.png" class="aboutuspage" height="375" width="475">
