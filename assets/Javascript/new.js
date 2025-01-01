@@ -46,7 +46,7 @@ onAuthStateChanged(auth, (user) => {
 
 // Login/Register button click
 authButton.addEventListener("click", () => {
-    window.location.href = "./index.html";
+    window.location.href = "./login.html";
 });
 
 // Logout button click
