@@ -67,7 +67,7 @@ form.addEventListener("submit", (event) => {
                 const user = userCredential.user;
                 console.log('Login successful:', user);
                 // Redirect to a different page (e.g., dashboard or home)
-                window.location.href = "./new.html"; // Change this to the page you want to redirect to
+                window.location.href = "./index.html"; // Change this to the page you want to redirect to
             })
             .catch((error) => {
                 const errorCode = error.code;

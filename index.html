@@ -3,23 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="./assets/css/Index.css">
+    <title>Medpex</title>
+    <link rel="stylesheet" href="./assets/css/new.css">
+    <link rel="stylesheet" href="./assets/css/categories.css">
 </head>
 <body>
+    <div id="Home">
+    <header class="headers">
+        <h1>Medpex</h1>
+        <div id="user-icon-container">
+            <img src="./assets/images/profileimg.png" id="user-icon" class="icon" alt="User Icon">
+            <img src="./assets/images/addtocart.png" class="addtocart">
+            <img src="./assets/images/Medpex (2) (1).png" class="medpex">
+            <div id="dropdown-menu" class="menubutton">
+                <p id="welcome-text">Welcome!</p>
+                <a href="./index.html">
+                    <button id="auth-button">Login/Register</button>
+                </a>
+                <button id="logout-button" style="display: none;">Logout</button>
+            </div>
+            <nav class="navigation">
+                <a href="./new.html" class="nav">Home</a>
+                <a href="#Categories" class="nav">Categories</a>
+                <a href="./about us.html" class="nav">About Us</a>
+                <a href="./contacts.html" class="nav">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+</div>
+    <main>
+        <img src="./assets/images/med background.jpg" height="700" width="1486" class="medback">
+        <h1 class="welcome">Welcome to Medpex!</h1>
+        <p class="line">A site where you can explore medical products</p>
+    </main>
+
+    <!-- CATEGORIES -->
+     <div class="catelog" id="Categories"></div>
+    <h2 class="topcat">Top Categories</h2>
+    <section id="categories-container" class="catcontainer">
+        <!-- Categories will be dynamically injected here -->
+    </section>
+    <p class="miniline">-</p>
+
+    <div class="search">
+    <div id="search-container">
+        <input type="text" id="search-bar" placeholder="Search products...">
+        <button id="search-btn">&#128269;</button> <!-- Search icon -->
+    </div>
+</div>
+
+    <!-- Categories Container -->
+    <div id="categories-container"></div>
+
+    <!-- Search Results Container -->
+    <div id="search-results-container"></div>
+
+    <!-- Prescription Modal -->
+    <div id="prescription-modal" class="modal">
+        <div class="modal-content">
+            <h3>Upload Prescription</h3>
+            <input type="file" id="prescription-file" accept="image/*, .pdf" />
+            <button id="upload-btn">Upload Prescription</button>
+            <button id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+    <!-- <div class="medabout" id="AboutUs"></div> -->
+    <div class="contactus" id="ContactUs"></div>
+
+    <script type="module" src="./assets/Javascript/new.js"></script>
    
-    <form action="" id="form" novalidate>
-        <h1 class="heading">MEDPEX LOGIN</h1>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"  >
-        <span id="email-error" ></span>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" minlength="8" maxlength="32">
-        <span id="password-error"></span>
-        <button type="submit" id="login">Login</button>
-        <p class="sign">Don't have an account ? <a href="./Register.html"> Register</a></p>
-    </form>
-      <script type="module" src="./assets/Javascript/Login.js"></script>
-    
 </body>
 </html>

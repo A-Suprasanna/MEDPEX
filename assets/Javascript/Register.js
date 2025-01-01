@@ -99,7 +99,7 @@ form.addEventListener("submit", (event) => {
     .then((userCredential) => {
       // Registration successful
       alert("Registration successful!");
-      window.location.href = "./new.html"; // Redirect to new page
+      window.location.href = "./index.html"; // Redirect to new page
     })
     .catch((error) => {
       const errorCode = error.code;
