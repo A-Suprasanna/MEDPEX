@@ -164,7 +164,10 @@ h1 {
     width: 30%;  /* Adjust width for each product to fit next to each other */
     margin: 10px;  /* Add some margin for spacing between products */
 }
-
+#search-results-container{
+    display: flex;
+    
+}
 #search-bar {
     width: 80%;
     padding: 10px;

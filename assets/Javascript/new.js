@@ -194,8 +194,9 @@ uploadBtn.addEventListener("click", () => {
         alert("Please upload a prescription before proceeding.");
         return;
     }
-    prescriptionModal.style.display = "none";
-    paymentPage.style.display = "flex";
+
+    // Redirect to the payment page
+    window.location.href = "./payment.html"; // Replace with the actual path to your payment page
 });
 
 // Payment Form Submission
