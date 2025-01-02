@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     } else {
         // If no product is found in localStorage, redirect back to the main page
-        window.location.href = "index.html";
+        window.location.href = "./index.html";
     }
 
     // Handle payment form submission
