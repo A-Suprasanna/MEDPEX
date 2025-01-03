@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls button {
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+.cartheading{
+    margin-left: 650px;
+    margin-top: -10px;
+}
+.remove-item {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 1200px;
+    position: relative;
+    top: -100px;
+}
+.proceed-to-payment-btn{
+    padding: 5px;
+    background-color: green;
+    color: white;
+    font-weight: bolder;
+    margin-top: 30px;
+    margin-left: 1300px;
+}
+.homeimg{
+ position: relative;
+ top: 38px;
+ left: 25px;
+}

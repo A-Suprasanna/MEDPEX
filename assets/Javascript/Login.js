@@ -24,16 +24,12 @@ const passworderror = document.getElementById("password-error");
 const form = document.getElementById("form");
 const btn = document.getElementById("login");
 const minlength = 8;
-// Function to validate email format
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
 }
-// Handle form submission
 form.addEventListener("submit", (event) => {
-    // Prevent form submission if the form is invalid
     event.preventDefault();
-    // Clear previous error messages
     emailerror.textContent = '';
     passworderror.textContent = '';
     let valid = true;
@@ -53,26 +49,23 @@ form.addEventListener("submit", (event) => {
         passworderror.textContent = `Password must be at least ${minlength} characters long.`;
         valid = false;
     }
-    // If validation passes, proceed to Firebase authentication
     if (valid) {
         const emailValue = email.value;
         const passwordValue = password.value;
-        // Disable the login button during the request
         btn.disabled = true;
         btn.innerText = 'Logging in...';
-        // Sign in the user using Firebase Authentication
         signInWithEmailAndPassword(auth, emailValue, passwordValue)
             .then((userCredential) => {
-                // Successfully logged in
                 const user = userCredential.user;
+                let bool = true;
+                localStorage.setItem('userLoggedIn',JSON.stringify(bool))
+                localStorage.setItem('userEmail', user.email);
                 console.log('Login successful:', user);
-                // Redirect to a different page (e.g., dashboard or home)
-                window.location.href = "./index.html"; // Change this to the page you want to redirect to
+                    window.location.href = "../../../index.html";
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                // Handle Firebase authentication error codes
                 if (errorCode === 'auth/user-not-found') {
                     emailerror.textContent = 'No user found with this email';
                 } else if (errorCode === 'auth/wrong-password') {
@@ -80,24 +73,20 @@ form.addEventListener("submit", (event) => {
                 } else if (errorCode === 'auth/invalid-email') {
                     emailerror.textContent = 'Invalid email format';
                 } else {
-                    // For other errors, show a general message
                     passworderror.textContent = 'Login failed. Please try again.';
                 }
                 console.error('Error during login:', errorCode, errorMessage);
-                // Reset the button state
                 btn.disabled = false;
                 btn.innerText = 'Login';
             });
     }
 });
-// Clear error messages as user types
 email.addEventListener("input", () => {
-    emailerror.textContent = ''; // Only clear email error
+    emailerror.textContent = '';
 });
 password.addEventListener("input", () => {
-    passworderror.textContent = ''; // Only clear password error
+    passworderror.textContent = '';
 });
-
 
 
 

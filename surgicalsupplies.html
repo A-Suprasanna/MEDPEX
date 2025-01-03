@@ -11,16 +11,10 @@
     <a href="./index.html">
         <img src="./assets/images/homeimg.png" class="homeimg" height="50" width="50">
     </a>
+    <a href="./cart.html">
+        <img src="./assets/images/addtocart.png" class="addtocart">
+    </a>
 
-    <img src="./assets/images/addtocart.png" class="addtocart" id="cart-icon">
-<span id="cart-count">0</span> <!-- Counter for cart items -->
-<div id="cart-modal" class="modal">
-    <div class="modal-content">
-        <h3>Your Cart</h3>
-        <ul id="cart-items"></ul> <!-- List to display cart items -->
-        <button id="close-cart-btn">Close</button>
-    </div>
-</div>
 
     
     <h1 class="medicaldrugs">Surgical supplies</h1>
@@ -35,27 +29,6 @@
             <button id="upload-btn">Upload Prescription</button>
             <button id="cancel-btn">Cancel</button>
         </div>
-    </div>
-
-    <!-- Payment Page -->
-    <div id="payment-page" class="payment-page" style="display: none;">
-        <h3>Payment Page</h3>
-        <form id="payment-form">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" required /><br>
-
-            <label for="address">Address:</label><br>
-            <input type="text" id="address" required /><br>
-
-            <label for="payment-method">Payment Method:</label><br>
-            <select id="payment-method" required>
-                <option value="credit-card">Credit Card</option>
-                <option value="debit-card">Debit Card</option>
-                <option value="paypal">PayPal</option>
-            </select><br>
-
-            <button type="submit">Proceed to Payment</button>
-        </form>
     </div>
     <script src="./assets/Javascript/surgicalsupplies.js"></script>
 </body>

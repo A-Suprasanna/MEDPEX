@@ -54,12 +54,21 @@ logoutButton.addEventListener("click", () => {
     signOut(auth)
         .then(() => {
             console.log("User logged out");
-            window.location.reload(); // Refresh the page to update UI
+
+            // Remove the user's email from local storage
+            localStorage.removeItem("userEmail");
+
+            // Set a "user logged in" flag to false in local storage
+            localStorage.setItem("isLoggedIn", "false");
+
+            // Refresh the page to update UI
+            window.location.reload();
         })
         .catch((error) => {
             console.error("Error logging out:", error);
         });
 });
+
 
 // Search Bar and Containers
 const searchBar = document.getElementById("search-bar");
@@ -166,7 +175,6 @@ function renderSearchResults(products) {
             <p>${product.price} ${product.currency}</p>
             <div class="product-buttons">
                 <button class="buy-now-btn" data-product="${product.name}">Buy Now</button>
-                <button class="buy-now-btn" data-product="${product.name}">Add to cart</button>
             </div>
         `;
         searchResultsContainer.appendChild(productCard);
