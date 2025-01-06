@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const productsContainer = document.getElementById("Medicalanddrugs");
     const prescriptionModal = document.getElementById("prescription-modal");
@@ -38,8 +39,23 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelectorAll(".buy-now-btn").forEach((btn) => {
                 btn.addEventListener("click", (e) => {
                     const productName = e.target.getAttribute("data-product");
-                    prescriptionModal.style.display = "flex"; // Show the modal
-                    localStorage.setItem("currentProduct", productName); // Store the product name for later
+
+                    // Check if the user is logged in
+                    const userEmail = localStorage.getItem("userEmail");
+                    if (!userEmail) {
+                        alert("Please log in to proceed.");
+                        // Save redirect action and product info
+                        localStorage.setItem(
+                            "redirectAction",
+                            JSON.stringify({ action: "buyNow", productName })
+                        );
+                        window.location.href = "/login.html"; // Redirect to login page
+                        return;
+                    }
+
+                    // Show the modal
+                    prescriptionModal.style.display = "flex";
+                    localStorage.setItem("currentProduct", productName);
                 });
             });
         });
@@ -63,8 +79,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add to Cart function
     function addToCart(productName) {
-        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const userEmail = localStorage.getItem("userEmail");
+        if (!userEmail) {
+            alert("Please log in to add items to your cart.");
+            window.location.href = "/login.html";
+            return;
+        }
+
+        const cartKey = `${userEmail}_cart`;
+        const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
         const products = JSON.parse(localStorage.getItem("products"));
+        if (!products) {
+            console.error("Products list is not available in localStorage.");
+            return;
+        }
+
         const product = products.find((p) => p.name === productName);
 
         if (product) {
@@ -75,10 +105,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 product.quantity = 1;
                 cart.push(product);
             }
-            localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem(cartKey, JSON.stringify(cart));
             alert(`${productName} has been added to your cart!`);
         } else {
             console.error("Product not found:", productName);
         }
+    }
+
+    // Handle redirect action after login
+    const redirectAction = JSON.parse(localStorage.getItem("redirectAction"));
+    if (redirectAction) {
+        if (redirectAction.action === "buyNow") {
+            const productName = redirectAction.productName;
+
+            // Open the modal for the "Buy Now" action
+            prescriptionModal.style.display = "flex";
+            localStorage.setItem("currentProduct", productName);
+        }
+        localStorage.removeItem("redirectAction");
     }
 });
