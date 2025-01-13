@@ -120,23 +120,6 @@ form.addEventListener("submit", (event) => {
 
 
 
-//FOR BUTTON
-
-// createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
-//   .then((userCredential) => {
-//     const user = userCredential.user;
-//     const username = nameInput.value;  // Assuming the user is providing their name
-//     const firstLetter = username.charAt(0).toUpperCase();
-
-//     // Store the first letter in localStorage
-//     localStorage.setItem('usernameFirstLetter', firstLetter);
-
-//     // Redirect to home page
-//     window.location.href = "./home.html";
-//   })
-//   .catch((error) => {
-//     // Handle registration error as before
-//   });
 
 
 

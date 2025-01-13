@@ -92,6 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(categories => {
             displayCategories(categories);
             loadAllProducts(categories);
+
+return fetch('./assets/data/diabetescare.json')
+.then(response => response.json())
+.then(diabetescareProducts => {
+    allProducts = allProducts.concat(diabetescareProducts);
+});
         })
         .catch(error => console.error("Error loading categories:", error));
 });
@@ -165,7 +171,7 @@ function renderSearchResults(products) {
         return;
     }
 
-    products.forEach(product => {
+    products.forEach((product) => {
         const productCard = document.createElement("div");
         productCard.classList.add("product-card");
         productCard.innerHTML = `
@@ -174,38 +180,90 @@ function renderSearchResults(products) {
             <p>${product.description}</p>
             <p>${product.price} ${product.currency}</p>
             <div class="product-buttons">
-                <button class="buy-now-btn" data-product="${product.name}">Buy Now</button>
+                <button class="buy-now-btn" data-product='${JSON.stringify(product)}'>Buy Now</button>
             </div>
         `;
         searchResultsContainer.appendChild(productCard);
     });
 
     // Add event listeners for Buy Now buttons
-    document.querySelectorAll(".buy-now-btn").forEach(btn => {
+    document.querySelectorAll(".buy-now-btn").forEach((btn) => {
         btn.addEventListener("click", (e) => {
-            const productName = e.target.getAttribute("data-product");
+            const product = JSON.parse(e.target.getAttribute("data-product"));
+            const userEmail = localStorage.getItem("userEmail");
+
+            if (!userEmail) {
+                alert("Please log in to purchase products.");
+                return;
+            }
+
+            // Store the selected product in localStorage
+            localStorage.setItem("currentProduct", JSON.stringify(product));
             prescriptionModal.style.display = "flex";
-            localStorage.setItem("currentProduct", productName);
         });
     });
 }
 
-// Cancel Modal
+// Prescription Modal Buttons
 cancelBtn.addEventListener("click", () => {
     prescriptionModal.style.display = "none";
+    localStorage.removeItem("currentProduct");
 });
 
-// Upload Prescription
 uploadBtn.addEventListener("click", () => {
     const prescriptionFile = document.getElementById("prescription-file").files[0];
+
     if (!prescriptionFile) {
         alert("Please upload a prescription before proceeding.");
         return;
     }
 
-    // Redirect to the payment page
-    window.location.href = "./payment.html"; // Replace with the actual path to your payment page
+    // Simulate prescription upload success
+    const product = JSON.parse(localStorage.getItem("currentProduct"));
+    const userEmail = localStorage.getItem("userEmail");
+
+    if (!userEmail) {
+        alert("Please log in to proceed.");
+        prescriptionModal.style.display = "none";
+        return;
+    }
+
+    const purchasedKey = `${userEmail}_purchased`;
+    const purchased = JSON.parse(localStorage.getItem(purchasedKey)) || [];
+
+    // Add product to purchased items
+    const existingProductIndex = purchased.findIndex((p) => p.name === product.name);
+
+    if (existingProductIndex !== -1) {
+        purchased[existingProductIndex].quantity += 1;
+    } else {
+        purchased.push({ ...product, quantity: 1 });
+    }
+
+    localStorage.setItem(purchasedKey, JSON.stringify(purchased));
+
+    // Redirect to payment page
+    prescriptionModal.style.display = "none";
+    window.location.href = "./payment.html"; // Replace with your payment page path
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

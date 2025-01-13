@@ -28,3 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert(`Payment successful for ${currentProduct.name}!\nUser: ${userName}\nAddress: ${userAddress}\nPayment Method: ${paymentMethod}`);
     });
 });
+
+
+
+
