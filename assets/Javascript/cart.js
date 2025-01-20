@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderCart() {
         cartItemsContainer.innerHTML = "";
         if (cart.length === 0) {
-            cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+            cartItemsContainer.innerHTML = '<p class="empty-cart-message">Your cart is empty.</p>';
             proceedToBuyButton.style.display = "none"; // Hide button when the cart is empty
         } else {
             cart.forEach((item, index) => {
